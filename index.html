@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>mrEDitor.github.io</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="favicon.png" type="image/png">
+		<link rel="apple-touch-icon" href="touchicon.png" type="image/png">
+		<link rel="stylesheet" href="./default.css" />
+		<script src="./modern.js"></script>
+		<script>document.write('<link rel="stylesheet" href="./modern.css" />');</script>
+	</head>
+	<body>
+		<header id="page-header">
+			<h1 id="welcome">
+				<script>
+					const greetings = ['Доброй ночи!', 'Доброе утро!', 'Добрый день!', 'Добрый вечер!'];
+					const date = new Date();
+					document.write(greetings[Math.floor((date.getTime() - date.getTimezoneOffset() * 60000) / 21600000) % 4]);
+				</script>
+				<noscript>Приветствую!</noscript>
+			</h1>
+		</header>
+		<div id="page-wrapper">
+			<div id="content-wrapper">
+				<section id="about" class="column">
+					<p>
+						Ме&shy;ня зо&shy;вут Эдуард «mrEDitor» Минасян, и я яв&shy;ля&shy;юсь сту&shy;ден&shy;том на&shy;прав&shy;ле&shy;ния «Про&shy;грам&shy;м&shy;ная ин&shy;же&shy;не&shy;рия» ка&shy;фед&shy;ры
+						<a href="http://mopevm.sfedu.ru">МОП ЭВМ</a> <a href="http://ictis.sfedu.ru/">ИКТИБ</a> <a href="http://tti.sfedu.ru/">ИТА</a> <a href="http://sfedu.ru/">ЮФУ</a>
+						в г. Та&shy;ган&shy;ро&shy;ге. А вы на&shy;хо&shy;ди&shy;тесь на мо&shy;ей до&shy;маш&shy;ней стра&shy;ни&shy;це.
+					</p>
+				</section>
+				<nav id="activities" class="column">
+					<div class="title">Чем я тут развлекаюсь:</div>
+					<ul>
+						<li>
+							<a href="https://extensions.gnome.org/accounts/profile/mrEDitor">Расширения графического окружения Gnome</a>
+						</li>
+						<li>
+							<a href="https://yadi.sk/i/42PFLkxZ39QKjx">Участник ACM International Collegiate Programming Contest 2016-2017</a>
+							<span class="short note">(#10 в <a href="http://contest.sgu.ru/monitor/1">NEERC, Southern Subregion</a>; #135 в <a href="https://neerc.ifmo.ru/archive/2016/standings.html">NEERC</a>)</span>
+						</li>
+						<li>
+							<a href="https://github.com/mrEDitor/DPCM">Реализация DPCM-кодирования аудиосигнала</a>
+							<time class="short note" datetime="2016-05">(май 2016 г.)</time>
+						</li>
+						<li>
+							<a href="https://yadi.sk/i/aRYtsfTg39Rhmd">Участник ACM International Collegiate Programming Contest 2015-2016</a>
+							<span class="short note">(#47 в <a href="http://contest.sgu.ru/history/acm-icpc/standings2015.html">NEERC, Southern Subregion</a>)</span>
+						</li>
+						<li>
+							<a href="http://annimon.com/article/984">Статья о графическом формате DXT1/3/5 (*.dds)</a>
+							<time class="short note" datetime="2014-11">(ноябрь 2014 г.)</time>
+						</li>
+						<li>
+							<a href="http://annimon.com/forum/?act=post&id=231229">Игра XMasBall (JavaME)</a>
+							<time class="short note" datetime="2013-01">(январь 2013 г.)</time>
+						</li>
+						<li>
+							<a href="http://annimon.com/forum/?act=post&id=67224">Игра 3Detris (JavaME)</a>
+							<time class="short note" datetime="2011-03">(март 2011 г.)</time>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div id="page-footer">
+				<nav id="contacts" class="column">
+					<div class="title">Ищите меня на:</div>
+					<ul>
+						<li>
+							<a href="mailto:mrEDitor@mail.ru">
+								<img hidden src="./mail.svg" alt="">
+								mrEDitor@mail.ru
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/mrEDitor">
+								<img hidden src="./github.svg" alt="">
+								GitHub.com
+							</a>
+						</li>
+						<li>
+							<a href="http://annimon.com/user/mrEDitor">
+								<img hidden src="./annimon.svg" alt="">
+								aNNiMON.com
+							</a>
+						</li>
+						<li>
+							<a href="http://codeforces.com/profile/mrEDitor">
+								<img hidden src="./codeforces.svg" alt="">
+								CodeForces.com
+							</a>
+						</li>
+						<li>
+							<a href="https://steamcommunity.com/id/mrEDitor">
+								<img hidden src="./steam.svg" alt="">
+								Steam Community
+							</a>
+						</li>
+						<li>
+							<a href="https://vk.com/mrEDitor">
+								<img hidden src="./vk.svg" alt="">
+								ВКонтакте
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<footer>
+					<div id="banners">
+						<a href="http://api.hostinger.ru/redir/17875" target="_blank">Хостингер</a>
+						|
+						<!-- Yandex.Metrika counter -->
+						<script type="text/javascript">
+							(function (d, w, c) {
+								(w[c] = w[c] || []).push(function() {
+									try {
+										w.yaCounter28528226 = new Ya.Metrika({
+											id:28528226,
+											clickmap:true,
+											trackLinks:true,
+											accurateTrackBounce:true
+										});
+									} catch(e) { }
+								});
+
+								var n = d.getElementsByTagName("script")[0],
+									s = d.createElement("script"),
+									f = function () { n.parentNode.insertBefore(s, n); };
+								s.type = "text/javascript";
+								s.async = true;
+								s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+								if (w.opera == "[object Opera]") {
+									d.addEventListener("DOMContentLoaded", f, false);
+								} else { f(); }
+							})(document, window, "yandex_metrika_callbacks");
+						</script>
+						<a href="https://metrika.yandex.ru/stat/?id=28528226&from=informer" target="_blank">Яндекс.Метрика</a>
+						|
+						<a href="https://yadi.sk/d/2zjMRazIhp7q4" target="_blank">Фонцы</a>
+					</div>
+					<div id="copyright">&copy;&nbsp;2010-2016, mrEDitor, CC-BY 3.0</div>
+				</footer>
+		</div>
+		</div>
+	</body>
+</html>

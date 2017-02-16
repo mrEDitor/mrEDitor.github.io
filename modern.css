@@ -103,6 +103,10 @@ body {
 		flex: 0 1 auto;
 		width: 100%;
 	}
+	
+	#copyright {
+		float: left;
+	}
 
 	section, nav {
 		padding: 0ex;

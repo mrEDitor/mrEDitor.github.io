@@ -75,6 +75,6 @@ footer {
 	padding-top: 0.2rem;
 }
 
-#banners {
+#banners, #copyright {
 	float: right;
 }

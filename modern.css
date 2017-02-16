@@ -59,9 +59,30 @@ body {
 	#about {
 		border: none;
 	}
+
+	#copyright {
+		clear: none;
+		float: left;
+	}
+
+	section, nav {
+		padding: 0ex;
+	}
 	
+	p {
+		margin: 0.4rem 0rem;
+	}
+
+	.column {
+		float: none;
+		margin: 1.25rem auto;
+	}
+}
+
+@media (min-width: 60ex) {
 	#contacts {
 		flex: 0 1 auto;
+		max-width: none;
 		width: 100%;
 		margin: 0px auto;
 	}
@@ -71,10 +92,11 @@ body {
 	}
 
 	#contacts ul {
-		align-items: flex-start;
+		align-content: center;
+		align-items: center;
 		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-around;
+		flex-flow: row wrap;
+		justify-content: center;
 		margin: auto;
 		padding: 0 4ex;
 		text-align: center;
@@ -83,7 +105,7 @@ body {
 	#contacts li {
 		display: inline-block;
 		min-width: 16ex;
-		flex-grow: 1;
+		flex: 0 1;
 		vertical-align: top;
 	}
 
@@ -102,23 +124,5 @@ body {
 	#page-footer {
 		flex: 0 1 auto;
 		width: 100%;
-	}
-	
-	#copyright {
-		clear: none;
-		float: left;
-	}
-
-	section, nav {
-		padding: 0ex;
-	}
-	
-	p {
-		margin: 0.4rem 0rem;
-	}
-
-	.column {
-		float: none;
-		margin: 1.25rem auto;
 	}
 }

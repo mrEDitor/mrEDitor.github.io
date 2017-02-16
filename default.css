@@ -76,5 +76,6 @@ footer {
 }
 
 #banners, #copyright {
+	clear: both;
 	float: right;
 }

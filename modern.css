@@ -105,6 +105,7 @@ body {
 	}
 	
 	#copyright {
+		clear: none;
 		float: left;
 	}
 

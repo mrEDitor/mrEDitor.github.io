@@ -15,8 +15,7 @@
 			<h1 id="welcome">
 				<script>
 					const greetings = ['Доброй ночи!', 'Доброе утро!', 'Добрый день!', 'Добрый вечер!'];
-					const date = new Date();
-					document.write(greetings[Math.floor((date.getTime() - date.getTimezoneOffset() * 60000) / 21600000) % 4]);
+					document.write(greetings[Math.floor(new Date().getHours() / 6) % 4]);
 				</script>
 				<noscript>Приветствую!</noscript>
 			</h1>
@@ -142,7 +141,7 @@
 						|
 						<a href="https://yadi.sk/d/2zjMRazIhp7q4" target="_blank">Фонцы</a>
 					</div>
-					<div id="copyright">&copy;&nbsp;2010-2016, mrEDitor, CC-BY 3.0</div>
+					<div id="copyright">&copy;&nbsp;2010-<script>document.write(new Date().getFullYear())</script><noscript>2017</noscript>, mrEDitor, CC-BY 3.0</div>
 				</footer>
 			</div>
 		</div>

@@ -16,8 +16,7 @@ html {
 	padding: 0.5ex 2.5ex;
 }
 
-#about {
-	float: none;
+.readable {
 	text-align: justify;
 }
 

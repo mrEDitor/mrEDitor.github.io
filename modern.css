@@ -3,6 +3,50 @@ body {
 	margin: 0;
 }
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(+50%);
+	}
+ 
+    to {
+        opacity: 1;
+        transform : translateY(0);
+    }
+}
+
+#grayout {
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	background-color: rgba(0,0,0,0.7);
+	animation: appear .12s cubic-bezier(.99, .28, .69, 1.01) forwards;
+	overflow: auto;
+}
+
+#grayout div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#grayout div.fit {
+	height: 100%;
+}
+
+#grayout div.fit img {
+	height: 100%;
+	padding: none;
+	cursor: zoom-in;
+}
+
+#grayout div.zoom img {
+	cursor: zoom-out;
+	margin: 6ex 6ex 24ex 6ex;
+}
+
 .wallpaper {
 	background-position-x: right;
 	background-position-y: top;
@@ -80,18 +124,48 @@ body {
 }
 
 @media (min-width: 60ex) {
-	#contacts {
+
+	.gallery {
+		flex: 0 1 auto;
+		margin: 2ex auto;
+	}
+
+	.gallery ul {
+		align-content: center;
+		align-items: center;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		padding: 0 4ex;
+		text-align: center;
+	}
+
+	.gallery li {
+		display: inline-block;
+		min-width: 16ex;
+		flex: 1 1;
+		vertical-align: top;
+	}
+
+	.gallery a img {
+		display: block;
+		margin: auto;
+		width: 92%;
+		transition: all 100ms ease-in;
+	}
+
+	.gallery a:hover img {
+		transform: scale(1.16);
+	}
+
+	.linkbar {
 		flex: 0 1 auto;
 		max-width: none;
 		width: 100%;
-		margin: 0px auto;
+		margin: 0ex auto 2ex auto;
 	}
 
-	#contacts .title {
-		display: none;
-	}
-
-	#contacts ul {
+	.linkbar ul {
 		align-content: center;
 		align-items: center;
 		display: flex;
@@ -102,14 +176,14 @@ body {
 		text-align: center;
 	}
 
-	#contacts li {
+	.linkbar li {
 		display: inline-block;
 		min-width: 16ex;
 		flex: 0 1;
 		vertical-align: top;
 	}
 
-	#contacts a img {
+	.linkbar a img {
 		display: block;
 		margin: auto;
 		height: 80%;
@@ -117,12 +191,16 @@ body {
 		transition: all 100ms ease-in;
 	}
 
-	#contacts a:hover img {
-		transform: scale(1.1);
+	.linkbar a:hover img {
+		transform: scale(1.16);
 	}
 
-	#page-footer {
-		flex: 0 1 auto;
-		width: 100%;
+	.text-only {
+		display: none;
 	}
+
+	.title {
+		font-size: 110%;
+	}
+
 }

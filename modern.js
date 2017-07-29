@@ -100,5 +100,5 @@ function showModal(url) {
 const QUERY_COUNT = 'https://cloud-api.yandex.net:443/v1/disk/public/resources'
 	+ '?public_key=TtRkzUEDRX7oa0doBszPuib3Vok%2BZvro2fnE7gA9aHk%3D'
 	+ '&fields=_embedded.total';
-tryOptinalGetRequest(QUERY_LIST, window.location.hash ? grepWallpaper : chooseWallpaper, 1000);
+tryOptinalGetRequest(QUERY_COUNT, window.location.hash ? grepWallpaper : chooseWallpaper, 1000);
 document.addEventListener('DOMContentLoaded', handleModalable);

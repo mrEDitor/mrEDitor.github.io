@@ -18,10 +18,14 @@ function chooseWallpaper() {
 
 function chooseWallpaperOf() {
 	const grep = window.location.href;
-	const grepResult = JSON.parse(this.responseText)._embedded.items.filter(
-		item => item.name.includes(window.location.hash.replace(/\-/g,' '))
+	const allImages = JSON.parse(this.responseText)._embedded.items;
+	const grepResult = allImages.filter(
+		item => item.name.includes(window.location.hash.substr(1).replace(/\-/g,' '))
 	);
-	const path = '/' + grepResult[Math.floor(Math.random() * grepResult.length)].name;
+	const path = '/' + (grepResult.length 
+		? grepResult[Math.floor(Math.random() * grepResult.length) ].name
+		: allImages[Math.floor(Math.random() * allImages.length) ].name
+	);
 	const QUERY_URI = 'https://cloud-api.yandex.net:443/v1/disk/public/resources/download'
 		+ '?public_key=TtRkzUEDRX7oa0doBszPuib3Vok%2BZvro2fnE7gA9aHk%3D'
 		+ '&fields=href&path=' + encodeURIComponent(path);

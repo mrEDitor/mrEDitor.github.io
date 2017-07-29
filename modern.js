@@ -16,6 +16,27 @@ function chooseWallpaper() {
 	tryOptinalGetRequest(QUERY_METADATA, acceptWallpaper, 1000);
 }
 
+function chooseWallpaperOf() {
+	const grep = window.location.href;
+	const grepResult = JSON.parse(this.responseText)._embedded.items.filter(
+		item => item.name.includes(window.location.hash.replace(/\-/g,' '))
+	);
+	const path = '/' + grepResult[Math.floor(Math.random() * grepResult.length)].name;
+	const QUERY_URI = 'https://cloud-api.yandex.net:443/v1/disk/public/resources/download'
+		+ '?public_key=TtRkzUEDRX7oa0doBszPuib3Vok%2BZvro2fnE7gA9aHk%3D'
+		+ '&fields=href&path=' + encodeURIComponent(path);
+	tryOptinalGetRequest(QUERY_METADATA, acceptWallpaper, 1000);
+}
+
+function grepWallpaper() {
+	const count = JSON.parse(this.responseText)._embedded.total;
+	const QUERY_LIST = 'https://cloud-api.yandex.net:443/v1/disk/public/resources'
+		+ '?public_key=TtRkzUEDRX7oa0doBszPuib3Vok%2BZvro2fnE7gA9aHk%3D'
+		+ '&fields=_embedded.items'
+		+ '&limit=' + count;
+	tryOptinalGetRequest(QUERY_LIST, chooseWallpaperOf, 1000);
+}
+
 function acceptWallpaper() {
 	const path = JSON.parse(this.responseText)._embedded.items[0].path;
 	const QUERY_URI = 'https://cloud-api.yandex.net:443/v1/disk/public/resources/download'
@@ -79,6 +100,5 @@ function showModal(url) {
 const QUERY_COUNT = 'https://cloud-api.yandex.net:443/v1/disk/public/resources'
 	+ '?public_key=TtRkzUEDRX7oa0doBszPuib3Vok%2BZvro2fnE7gA9aHk%3D'
 	+ '&fields=_embedded.total';
-
-tryOptinalGetRequest(QUERY_COUNT, chooseWallpaper, 1000);
+tryOptinalGetRequest(QUERY_LIST, window.location.hash ? grepWallpaper : chooseWallpaper, 1000);
 document.addEventListener('DOMContentLoaded', handleModalable);

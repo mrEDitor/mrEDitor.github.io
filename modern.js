@@ -19,8 +19,9 @@ function chooseWallpaper() {
 function chooseWallpaperOf() {
 	const grep = window.location.href;
 	const allImages = JSON.parse(this.responseText)._embedded.items;
+	const grepKey = window.location.hash.substr(1).replace(/\-/g,' ');
 	const grepResult = allImages.filter(
-		item => item.name.includes(window.location.hash.substr(1).replace(/\-/g,' '))
+		item => new RegExp(grepKey, 'i').test(item.name)
 	);
 	const path = '/' + (grepResult.length 
 		? grepResult[Math.floor(Math.random() * grepResult.length) ].name

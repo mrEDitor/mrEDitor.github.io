@@ -29,7 +29,7 @@ function chooseWallpaperOf() {
 	const QUERY_URI = 'https://cloud-api.yandex.net:443/v1/disk/public/resources/download'
 		+ '?public_key=TtRkzUEDRX7oa0doBszPuib3Vok%2BZvro2fnE7gA9aHk%3D'
 		+ '&fields=href&path=' + encodeURIComponent(path);
-	tryOptinalGetRequest(QUERY_METADATA, acceptWallpaper, 1000);
+	tryOptinalGetRequest(QUERY_URI, setWallpaper, 1000);
 }
 
 function grepWallpaper() {

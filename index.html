@@ -6,152 +6,244 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/png">
 		<link rel="apple-touch-icon" href="/touchicon.png" type="image/png">
-		<link rel="stylesheet" href="/default.css" />
-		<script src="/modern.js"></script>
-		<script>document.write('<link rel="stylesheet" href="/modern.css" />');</script>
+		<link rel="stylesheet" href="default.css" />
+		<script src="modern.js"></script>
+		<script>document.write('<link rel="stylesheet" href="modern.css" />');</script>
 	</head>
 	<body>
-		<header id="page-header">
-			<h1 id="welcome">
-				<script>
-					const greetings = ['Доброй ночи!', 'Доброе утро!', 'Добрый день!', 'Добрый вечер!'];
-					document.write(greetings[Math.floor(new Date().getHours() / 6) % 4]);
-				</script>
-				<noscript>Приветствую!</noscript>
-			</h1>
+		<header id="whoami">
+			<img src="me.jpg" alt="photo">
+			<h1>Эдуард Минасян</h1>
+			<p class="location">Таганрог</p>
 		</header>
-		<div id="page-wrapper">
-			<div id="content-wrapper">
-				<section id="about" class="column readable">
-					<p>
-						Меня зовут Эдуард «mrEDitor» Минасян, и я являюсь студентом направления «Программная инженерия» кафедры
-						<a href="http://mopevm.sfedu.ru">МОП ЭВМ</a> <a href="http://ictis.sfedu.ru/">ИКТИБ</a> <a href="http://tti.sfedu.ru/">ИТА</a> <a href="http://sfedu.ru/">ЮФУ</a>
-						в г. Таганроге. А вы находитесь на моей домашней странице.
+		<section id="education">
+			<h2>Образование</h2>
+			<ul>
+				<li class="mopevm ictis sfedu">
+					<p class="dates"><time datetime="2014-09-01">2014</time>&mdash;<time datetime="2018-06-27">2018</time></p>
+					<p class="organisation">
+						<a href="https://sfedu.ru">Южный федеральный университет</a>,
+						<a href="https://ictis.sfedu.ru">Институт компьютерных технологий и информационной безопасности</a>,
+						<a href="https://sites.google.com/view/mopevm/">Кафедра Математического обеспечения и применения ЭВМ</a>
 					</p>
-				</section>
-				<nav id="activities" class="column">
-					<div class="title">Чем я тут развлекаюсь:</div>
-					<ul>
-						<li>
-							<a href="https://extensions.gnome.org/accounts/profile/mrEDitor">Расширения графического окружения Gnome</a>
-						</li>
-						<li>
-							<a href="https://yadi.sk/i/jaSuE_GJ3Sy9U8">Участник ACM International Collegiate Programming Contest 2017-2018</a>
-							<span class="short note">(#40 в <a href="http://contest.sgu.ru/history/acm-icpc/standings-2017-qual-southern-neerc.html">Qualification Stage</a>, #23 в <a href="http://contest.sgu.ru/monitor/1">NEERC, Southern Subregion</a>; #168 в <a href="https://neerc.ifmo.ru/archive/2017/standings.html">NEERC</a>)</span>
-						</li>
-						<li>
-							<a href="Inscriptor/">Inscriptor (Android 4.0, Kotlin)</a>
-							<time class="short note" datetime="2017-03">(март 2017 г.)</time>
-						</li>
-						<li>
-							<a href="https://yadi.sk/i/42PFLkxZ39QKjx">Участник ACM International Collegiate Programming Contest 2016-2017</a>
-							<span class="short note">(#10 в <a href="https://neerc.ifmo.ru/archive/2016/southern/standings.html">NEERC, Southern Subregion</a>; #135 в <a href="https://neerc.ifmo.ru/archive/2016/standings.html">NEERC</a>)</span>
-						</li>
-						<li>
-							<a href="https://github.com/mrEDitor/DPCM">Реализация DPCM-кодирования аудиосигнала</a>
-							<time class="short note" datetime="2016-05">(май 2016 г.)</time>
-						</li>
-						<li>
-							<a href="https://yadi.sk/i/aRYtsfTg39Rhmd">Участник ACM International Collegiate Programming Contest 2015-2016</a>
-							<span class="short note">(#47 в <a href="https://neerc.ifmo.ru/archive/2015/southern/standings.html">NEERC, Southern Subregion</a>)</span>
-						</li>
-						<li>
-							<a href="http://annimon.com/article/984">Статья о графическом формате DXT1/3/5 (*.dds)</a>
-							<time class="short note" datetime="2014-11">(ноябрь 2014 г.)</time>
-						</li>
-						<li>
-							<a href="http://annimon.com/forum/?act=post&id=231229">Игра XMasBall (JavaME)</a>
-							<time class="short note" datetime="2013-01">(январь 2013 г.)</time>
-						</li>
-						<li>
-							<a href="http://annimon.com/forum/?act=post&id=67224">Игра 3Detris (JavaME)</a>
-							<time class="short note" datetime="2011-03">(март 2011 г.)</time>
-						</li>
-					</ul>
-				</nav>
-			</div>
-			<div id="page-footer">
-				<nav id="contacts" class="column linkbar">
-					<div class="title text-only">Ищите меня на:</div>
-					<ul>
-						<li>
-							<a href="mailto:mrEDitor@mail.ru">
-								<img hidden src="/mail.svg" alt="">
-								mrEDitor@mail.ru
-							</a>
-						</li>
-						<li>
-							<a href="https://github.com/mrEDitor">
-								<img hidden src="/github.svg" alt="">
-								GitHub.com
-							</a>
-						</li>
-						<li>
-							<a href="https://gitlab.com/mrEDitor">
-								<img hidden src="/gitlab.svg" alt="">
-								GitLab.com
-							</a>
-						</li>
-						<li>
-							<a href="http://annimon.com/user/mrEDitor">
-								<img hidden src="/annimon.svg" alt="">
-								aNNiMON.com
-							</a>
-						</li>
-						<li>
-							<a href="http://codeforces.com/profile/mrEDitor">
-								<img hidden src="/codeforces-blue.svg" alt="">
-								CodeForces.com
-							</a>
-						</li>
-						<li>
-							<a href="https://steamcommunity.com/id/mrEDitor">
-								<img hidden src="/steam.svg" alt="">
-								Steam
-							</a>
-						</li>
-						<li>
-							<a href="https://vk.com/mrEDitor">
-								<img hidden src="/vk.svg" alt="">
-								ВКонтакте
-							</a>
-						</li>
-					</ul>
-				</nav>
-				<footer>
-					<div id="banners">
-						<script type="text/javascript">
-							(function (d, w, c) {
-								(w[c] = w[c] || []).push(function() {
-									try {
-										w.yaCounter28528226 = new Ya.Metrika({
-											id:28528226,
-											clickmap:true,
-											trackLinks:true,
-											accurateTrackBounce:true
-										});
-									} catch(e) { }
-								});
-
-								var n = d.getElementsByTagName("script")[0],
-									s = d.createElement("script"),
-									f = function () { n.parentNode.insertBefore(s, n); };
-								s.type = "text/javascript";
-								s.async = true;
-								s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-								if (w.opera == "[object Opera]") {
-									d.addEventListener("DOMContentLoaded", f, false);
-								} else { f(); }
-							})(document, window, "yandex_metrika_callbacks");
-						</script>
-						<a href="https://metrika.yandex.ru/stat/?id=28528226&from=informer" target="_blank">Яндекс.Метрика</a>
-						|
-						<a href="https://yadi.sk/d/2zjMRazIhp7q4" target="_blank">Фонцы</a>
-					</div>
-					<div id="copyright">&copy;&nbsp;2010-<script>document.write(new Date().getFullYear())</script><noscript>2017</noscript>, mrEDitor, CC-BY 3.0</div>
-				</footer>
-			</div>
-		</div>
+					<p class="activity">09.03.04 «Программная инженерия», бакалавр</p>
+					<p class="publication">
+						Тема ВКР:
+						<a href="https://hub.lib.sfedu.ru/repository/material/800839761/">Разработка подключаемого к платформе LiveStreet программного модуля для автоматического извлечения ключевых слов из сообщений в блогах</a>
+					</p>
+				</li>
+				<li class="mopevm ictis sfedu">
+					<p class="dates"><time datetime="2018-09-01">2018</time>&mdash;<time datetime="2020-07-16">2020</time></p>
+					<p class="organisation">
+						<a href="https://sfedu.ru">Южный федеральный университет</a>,
+						<a href="https://ictis.sfedu.ru">Институт компьютерных технологий и информационной безопасности</a>,
+						<a href="https://sites.google.com/view/mopevm/">Кафедра Математического обеспечения и применения ЭВМ</a>
+					</p>
+					<p class="activity">09.04.04 «Программная инженерия», магистр</p>
+					<p class="publication">
+						Участие в <a href="https://hub.lib.sfedu.ru/repository/material/801271492/">XVII Всероссийской научной конференции молодых ученых, аспирантов и студентов «Информационные технологии, системный анализ и управление»</a>
+						с докладом на тему «Применение приемов разметки графов при статическом анализе программного кода»
+					</p>
+					<p class="publication">
+						Участие в <a href="http://ictis.sfedu.ru/news/featured/2019/05/%d0%be%d0%bf%d1%83%d0%b1%d0%bb%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d0%bd-%d1%81%d0%b1%d0%be%d1%80%d0%bd%d0%b8%d0%ba-v-%d0%b2%d1%81%d0%b5%d1%80%d0%be%d1%81%d1%81%d0%b8%d0%b9%d1%81%d0%ba%d0%be%d0%b9-%d0%bd/">V Всероссийской научно-технической конференции молодых ученых, аспирантов, магистрантов и студентов «Фундаментальные и прикладные аспекты компьютерных технологий и информационной безопасности»</a>
+						с докладом на тему «Проблемы при поиске плагиата среди решений задач по олимпиадному программированию с помощью JPlag»
+					</p>
+					<p class="publication">
+						Участие в <a href="http://ictis.sfedu.ru/news/featured/2020/06/proceedings/">VI Всероссийской научно-технической конференции молодых ученых, аспирантов, магистрантов и студентов «Фундаментальные и прикладные аспекты компьютерных технологий и информационной безопасности»</a>
+						с докладом на тему «Реализация и использование индексов исходного кода в плагине для IntelliJ IDEA»
+					</p>
+					<p class="publication">
+						Тема ВКР:
+						<a href="https://hub.lib.sfedu.ru/repository/material/801281452/">Разработка алгоритмов и программных средств анализа степени идентичности программ
+						</a>
+					</p>
+				</li>
+				<li class="ictis sfedu">
+					<p class="dates"><time datetime="2020-09-01">2020</time>&mdash;н.в.</p>
+					<p class="organisation">
+						<a href="https://sfedu.ru">Южный федеральный университет</a>,
+						<a href="https://ictis.sfedu.ru">Институт компьютерных технологий и информационной безопасности</a>
+					</p>
+					<p class="activity">09.06.01 «Информатика и вычислительная техника», аспирант</p>
+				</li>
+			</ul>
+		</section>
+		<section id="professional">
+			<h2>Опыт работы</h2>
+			<ul>
+				<li class="monitel">
+					<p class="dates"><time datetime="2018-09">2018</time>&mdash;н.в.</p>
+					<p class="organisation">
+						<a href="https://monitel.com">АО «Монитор Электрик»</a>
+					</p>
+					<p class="activity">Инженер-программист</p>
+					<p class="project netcore">Разработка и поддержка платформенных компонент комплекса СК-11 (.NET Core)</p>
+					<p class="project java">Разработка и поддержка компонент интеграции с СК-11 для внешних систем (Java, Eclipse Platform)</p>
+					<p class="project kotlin android">Поддержка интеграции Android-приложения в СК-11 (Kotlin, Realm)</p>
+				</li>
+				<li class="oggetto">
+					<p class="dates"><time datetime="2017-01">2017</time>&mdash;<time datetime="2018-08">2018</time></p>
+					<p class="organisation">
+						<a href="https://oggettoweb.com">ООО «Оджетто Веб»</a>
+					</p>
+					<p class="activity">Веб-разработчик (бекенд)</p>
+					<p class="project php mysql redis">Поддержка и развитие интернет-магазинов на платформе Magento (PHP, Zend Framework, Nginx, MySQL, Redis, HTML/CSS, JavaScript)</p>
+					<p class="project php">Разработка и поддержка сервисов внутренней инфраструктуры: API Gateway, Bitrix CRM (PHP)</p>
+				</li>
+				<li class="oggetto">
+					<p class="dates"><time datetime="2016-09">2016</time></p>
+					<p class="activity">Стажер</p>
+				</li>
+			</ul>
+		</section>
+		<section id="activities">
+			<h2>Разное</h2>
+			<ul>
+				<li class="icpc">
+					<p class="activity">Участие в полуфинале ACM International Collegiate Programming Contest</p>
+					<p class="award">
+						<time datetime="2019-10">2019 г.</time>:
+						#32 в <a href="http://contest.sgu.ru/history/acm-icpc/standings-2019-qual-southern-neerc.html">Отборочный этап</a>;
+						#27 в <a href="https://contest.sgu.ru/history/acm-icpc/standings2019.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>;
+						#127 в <a href="https://neerc.ifmo.ru/archive/2019/standings.html">NEERC (Чемпионат России и ближнего зарубежья)</a>
+					</p>
+					<p class="award">
+						<time datetime="2018-10">2018 г.</time>:
+						#31 в <a href="http://contest.sgu.ru/history/acm-icpc/standings-2018-qual-southern-neerc.html">Отборочный этап</a>;
+						#35 в <a href="https://contest.sgu.ru/history/acm-icpc/standings2018.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>
+					</p>
+					<p class="award">
+						<time datetime="2017-10">2017 г.</time>:
+						#40 в <a href="http://contest.sgu.ru/history/acm-icpc/standings-2017-qual-southern-neerc.html">Отборочный этап</a>;
+						#23 в <a href="https://contest.sgu.ru/history/acm-icpc/standings2017.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>;
+						#168 в <a href="https://neerc.ifmo.ru/archive/2017/standings.html">NEERC (Чемпионат России и ближнего зарубежья)</a>
+					</p>
+					<p class="award">
+						<time datetime="2016-10">2016 г.</time>:
+						#10 в <a href="https://neerc.ifmo.ru/archive/2016/southern/standings.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>;
+						#135 в <a href="https://neerc.ifmo.ru/archive/2016/standings.html">NEERC (Чемпионат России и ближнего зарубежья)</a>
+					</p>
+					<p class="award">
+						<time datetime="2015-10">2015 г.</time>:
+						#47 в <a href="https://neerc.ifmo.ru/archive/2015/southern/standings.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>
+					</p>
+				</li>
+				<li class="yaprofi">
+					<p class="activity">Участие в олимпиаде «Я &mdash; Профессионал»</p>
+					<p class="award">
+						Призёр по направлению «Программирование и информационные технологии»
+						<time datetime="2018-03-15">2018</time>,
+						<time datetime="2020-03-26">2020</time> гг.
+					</p>
+				</li>
+				<li>
+					<p class="dates"><time datetime="2017-03">03/2017</time></p>
+					<p class="activity">Pet Project</p>
+					<p class="project kotlin android">
+						<a href="Inscriptor/">Inscriptor (Android 4.0, Kotlin)</a>
+					</p>
+				</li>
+				<li class="gnome">
+					<p class="dates"><time datetime="2016-07">2016</time>&mdash;н.в.</p>
+					<p class="activity">Pet Project</p>
+					<p class="project github javascript">
+						Разработка и поддержка расширения
+						<a href="https://extensions.gnome.org/extension/1096/scroll-panel/">Scroll Panel</a>
+						для Gnome Shell (JavaScript)
+					</p>
+				</li>
+				<li class="annimon no-print">
+					<p class="activity">aNNiMON.com Community:</p>
+					<p class="publication">
+						<time datetime="2020-01-16">16/01/2020</time>:
+						<a href="https://annimon.com/article/3763">Platform Invocation в .NET Core</a>
+					</p>
+					<p class="publication">
+						<time datetime="2020-01-11">11/01/2020</time>:
+						<a href="https://annimon.com/article/3730">Оценка идентичности программного кода</a>
+					</p>
+					<p class="publication">
+						<time datetime="2014-11-30">30/11/2014</time>:
+						<a href="https://annimon.com/article/984">Сжатие текстур: S3TC (DXTn)</a>
+					</p>
+					<p class="project java">
+						<time datetime="2013-01-09">09/01/2013</time>:
+						<a href="https://annimon.com/forum/id230490-10#post231229">Игра XMasBall (JavaME)</a>
+					</p>
+					<p class="project java">
+						<time datetime="2011-04-27">27/04/2011</time>:
+						<a href="https://annimon.com/forum/id18513-280#post67224">Игра 3Detris (JavaME)</a>
+					</p>
+				</li>
+				<li class="chgk">
+					<p class="activity">Участие в студенческом и спортивном «Что? Где? Когда?»</p>
+				</li>
+			</ul>
+		</section>
+		<section id="skills">
+			<h2>Технологии</h2>
+			<ul>
+				<li class="like">C# (.NET Core)</li>
+				<li class="like">Kotlin</li>
+				<li class="like">Git</li>
+				<li class="like">Алгоритмы и структуры данных</li>
+				<li class="like">Проектирование API</li>
+				<li class="like">Unit-тестирование</li>
+				<li class="like">Linux</li>
+				<li class="">Java (IDE tooling)</li>
+				<li class="">PHP</li>
+				<li class="">MySQL</li>
+				<li class="">Redis</li>
+				<li class="">Nginx</li>
+				<li class="">JavaScript</li>
+				<li class="">C/C++</li>
+				<li class="">Windows</li>
+				<li class="">Team Foundation Version Control</li>
+			</ul>
+		</section>
+		<section id="learning">
+			<h2>Исследовательские интересы</h2>
+			<ul>
+				<li>Статические анализаторы</li>
+				<li>Трансляторы</li>
+				<li>Обработка естесственных языков</li>
+				<li>Формальная верификация</li>
+			</ul>
+		</section>
+		<section id="languages">
+			<h2>Языки</h2>
+			<ul>
+				<li>Русский</li>
+				<li>Английский (д/проф.ц. или intermediate)</li>
+			</ul>
+		</section>
+		<section id="contacts">
+			<h2>Контактные данные</h2>
+			<ul>
+				<li>
+					<a href="mailto:mrEDitor@ya.ru">mrEDitor@ya.ru</a>
+				</li>
+				<li class="telegram">
+					<a href="https://t.me/eminasyan">t.me/eminasyan</a>
+				</li>
+				<li class="linkedin">
+					<a href="https://linkedin.com/in/mrEDitor">linkedin.com/in/mrEDitor</a>
+				</li>
+				<li class="github">
+					<a href="https://github.com/mrEDitor">github.com/mrEDitor</a>
+				</li>
+				<li class="gitlab">
+					<a href="https://gitlab.com/mrEDitor">gitlab.com/mrEDitor</a>
+				</li>
+				<li class="vk">
+					<a href="https://vk.com/mrEDitor">vk.com/mrEDitor</a>
+				</li>
+			</ul>
+		</section>
+		<footer>
+			&copy;
+			<script>document.write(new Date().getFullYear().toString())</script>
+			<a href="https://mrEDitor.github.io">mrEDitor.github.io</a>
+		</footer>
 	</body>
 </html>

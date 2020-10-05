@@ -1,0 +1,78 @@
+html {
+	font-family: "PT Sans", "Open Sans", "Fira Sans", "Noto Sans", sans-serif;
+	font-size: 1.2em;
+	line-height: 2rem;
+	width: 100%;
+}
+
+#page-header {
+	font-family: "PT Serif", "Open Serif", "Fira Serif", "Noto Serif", sans-serif;;
+	font-style: italic;
+	padding: 0 2.5ex;
+}
+
+#page-wrapper {
+	padding: 0.5ex 2.5ex;
+}
+
+.readable {
+	text-align: justify;
+}
+
+.note {
+	color: gray;
+	font-style: italic;
+	font-size: 0.75rem;
+}
+
+.short {
+	white-space: nowrap;
+}
+
+.column {
+	margin: auto auto 1.25rem;
+	max-width: 80ex;
+}
+
+.title {
+	border-bottom: 0.05rem solid;
+	padding-bottom: 0;
+}
+
+a, a:visited {
+	color: blue;
+	text-decoration: none;
+	padding: 0;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+a:hover:visited, a:active:visited {
+	color: purple;
+}
+
+ul {
+	padding: 0 2ex;
+	margin: 0.2rem;
+}
+
+section, nav {
+	padding: 0.2ex;
+}
+
+#page-footer {
+	clear: both;
+}
+
+footer {
+	border-top: 0.1rem solid;
+	padding-top: 0.2rem;
+}
+
+#banners, #copyright {
+	clear: both;
+	float: right;
+}

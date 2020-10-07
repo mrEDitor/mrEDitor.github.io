@@ -1,5 +1,10 @@
 html {
-    max-width: 120ex;
+    max-width: 100ex;
+    margin: auto;
+}
+
+body {
+    position: relative;
 }
 
 #whoami {

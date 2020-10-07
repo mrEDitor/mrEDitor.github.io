@@ -1,20 +1,9 @@
-html {
-    max-width: 100ex;
-    margin: auto;
-}
-
-body {
-    position: relative;
-}
-
 #whoami {
     overflow: hidden;
 }
 
 #whoami img {
-    position: absolute;
-    top: 0;
-    right: 100%;
+    float: left;
     padding: 12px;
     width: 120px;
     height: 120px;

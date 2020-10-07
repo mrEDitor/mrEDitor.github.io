@@ -1,3 +1,26 @@
+div.no-print {
+    display: block !important;
+}
+
 li.no-print {
     display: list-item !important;
+}
+
+span.no-print {
+    display: inline !important;
+}
+
+html {
+    max-width: 100ex;
+    margin: auto;
+}
+
+body {
+    position: relative;
+}
+
+#whoami img {
+    position: absolute;
+    top: 0;
+    right: 100%;
 }

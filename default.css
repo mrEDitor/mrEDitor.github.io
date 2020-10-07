@@ -1,3 +1,7 @@
+html {
+    max-width: 150ex;
+}
+
 #whoami {
     overflow: hidden;
 }

@@ -1,9 +1,9 @@
 html {
+    max-width: 100ex;
     margin: auto;
 }
 
 body {
-    max-width: 100ex;
     position: relative;
 }
 
@@ -14,14 +14,10 @@ body {
 #whoami img {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 100%;
     padding: 12px;
     width: 120px;
     height: 120px;
-}
-
-header, section, footer {
-    margin-left: 150px;
 }
 
 header, section {

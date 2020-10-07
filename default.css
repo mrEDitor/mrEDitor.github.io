@@ -1,9 +1,9 @@
 html {
-    max-width: 100ex;
     margin: auto;
 }
 
 body {
+    max-width: 100ex;
     position: relative;
 }
 

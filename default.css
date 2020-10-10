@@ -1,12 +1,12 @@
 #whoami {
-    overflow: hidden;
+    min-height: 21ex;
 }
 
 #whoami img {
     float: left;
-    padding: 12px;
-    width: 120px;
-    height: 120px;
+    padding: 0 2ex;
+    width: 20ex;
+    height: 20ex;
 }
 
 header, section {
@@ -15,6 +15,10 @@ header, section {
 
 footer {
     padding-top: 8px;
+}
+
+ul {
+    padding-left: 4ex;
 }
 
 .no-print {

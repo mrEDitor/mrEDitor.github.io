@@ -8,15 +8,16 @@
 		<link rel="apple-touch-icon" href="/touchicon.png" type="image/png">
 		<link rel="stylesheet" href="default.css" />
 		<script src="modern.js"></script>
-		<script>if (location.search != "?print") document.write('<link rel="stylesheet" href="modern.css" />');</script>
+		<script>if (!location.search.startsWith('?print')) document.write('<link rel="stylesheet" href="modern.css" />');</script>
 	</head>
 	<body>
 		<header id="whoami">
 			<img src="me.jpg" alt="photo">
 			<h1>Эдуард Минасян</h1>
-			<p class="location">Таганрог</p>
+			<p id="phone"></p>
+			<p id="location">Таганрог</p>
 		</header>
-		<section id="contacts">
+		<section id="contacts" class="tags">
 			<h2>Контактные данные</h2>
 			<ul>
 				<li>
@@ -39,11 +40,11 @@
 				</li>
 			</ul>
 		</section>
-		<section id="education">
-			<h2>Образование</h2>
+		<section id="education" class="ribbon">
+			<h2 class="activity">Образование</h2>
 			<ul>
 				<li class="ictis sfedu">
-					<p class="dates"><time datetime="2020-09-01">2020</time>&mdash;н.в.</p>
+					<p class="dates"><time data-date="2020-09-01">2020</time>&mdash;<time>н.в.</time></p>
 					<p class="organisation">
 						<a href="https://sfedu.ru" data-abbr="ЮФУ">Южный федеральный университет</a>,
 						<a href="https://ictis.sfedu.ru" data-abbr="ИКТИБ">Институт компьютерных технологий и информационной безопасности</a>
@@ -51,7 +52,7 @@
 					<p class="activity">09.06.01 «Информатика и вычислительная техника», аспирант</p>
 				</li>
 				<li class="mopevm ictis sfedu">
-					<p class="dates"><time datetime="2018-09-01">2018</time>&mdash;<time datetime="2020-07-16">2020</time></p>
+					<p class="dates"><time data-date="2018-09-01">2018</time>&mdash;<time data-date="2020-07-16">2020</time></p>
 					<p class="organisation">
 						<a href="https://sfedu.ru" data-abbr="ЮФУ">Южный федеральный университет</a>,
 						<a href="https://ictis.sfedu.ru" data-abbr="ИКТИБ">Институт компьютерных технологий и информационной безопасности</a>,
@@ -59,24 +60,35 @@
 					</p>
 					<p class="activity">09.04.04 «Программная инженерия», магистр</p>
 					<p class="publication">
-						Участие в <a href="https://hub.lib.sfedu.ru/repository/material/801271492/">XVII Всероссийской научной конференции молодых ученых, аспирантов и студентов «<span data-abbr="ИТСАУ">Информационные технологии, системный анализ и управление</span>»</a>
-						с докладом на тему «Применение приемов разметки графов при статическом анализе программного кода» (3 место в секции)
-					</p>
-					<p class="publication">
-						Участие в <a href="http://ictis.sfedu.ru/news/featured/2019/05/%d0%be%d0%bf%d1%83%d0%b1%d0%bb%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d0%bd-%d1%81%d0%b1%d0%be%d1%80%d0%bd%d0%b8%d0%ba-v-%d0%b2%d1%81%d0%b5%d1%80%d0%be%d1%81%d1%81%d0%b8%d0%b9%d1%81%d0%ba%d0%be%d0%b9-%d0%bd/">V Всероссийской научно-технической конференции молодых ученых, аспирантов, магистрантов и студентов «<span data-abbr="ФПАКТИБ">Фундаментальные и прикладные аспекты компьютерных технологий и информационной безопасности</span>»</a>
-						и «Неделе науки ЮФУ» с докладом на тему «Проблемы при поиске плагиата среди решений задач по олимпиадному программированию с помощью JPlag»
-					</p>
-					<p class="publication">
-						Участие в <a href="http://ictis.sfedu.ru/news/featured/2020/06/proceedings/">VI Всероссийской научно-технической конференции молодых ученых, аспирантов, магистрантов и студентов «<span data-abbr="ФПАКТИБ">Фундаментальные и прикладные аспекты компьютерных технологий и информационной безопасности</span>»</a>
-						с докладом на тему «Реализация и использование индексов исходного кода в плагине для IntelliJ IDEA» (1 место в секции)
-					</p>
-					<p class="publication">
 						Тема ВКР:
 						<a href="https://hub.lib.sfedu.ru/repository/material/801281452/">Разработка алгоритмов и программных средств анализа степени идентичности программ</a>
 					</p>
+					<ul>
+						<li>
+							<p class="dates"><time data-date="2019-04">04/2019</time></p>
+							<p class="publication">
+								Участие в <a href="http://ictis.sfedu.ru/news/featured/2019/05/%d0%be%d0%bf%d1%83%d0%b1%d0%bb%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d0%bd-%d1%81%d0%b1%d0%be%d1%80%d0%bd%d0%b8%d0%ba-v-%d0%b2%d1%81%d0%b5%d1%80%d0%be%d1%81%d1%81%d0%b8%d0%b9%d1%81%d0%ba%d0%be%d0%b9-%d0%bd/">V Всероссийской научно-технической конференции молодых ученых, аспирантов, магистрантов и студентов «<span data-abbr="ФПАКТИБ">Фундаментальные и прикладные аспекты компьютерных технологий и информационной безопасности</span>»</a>
+								и «Неделе науки ЮФУ» с докладом на тему «Проблемы при поиске плагиата среди решений задач по олимпиадному программированию с помощью JPlag»
+							</p>
+						</li>
+						<li>
+							<p class="dates"><time data-date="2019-12">12/2019</time></p>
+							<p class="publication">
+								Участие в <a href="https://hub.lib.sfedu.ru/repository/material/801271492/">XVII Всероссийской научной конференции молодых ученых, аспирантов и студентов «<span data-abbr="ИТСАУ">Информационные технологии, системный анализ и управление</span>»</a>
+								с докладом на тему «Применение приемов разметки графов при статическом анализе программного кода» (3 место в секции)
+							</p>
+						</li>
+						<li>
+							<p class="dates"><time data-date="2020-04">04/2020</time></p>
+							<p class="publication">
+								Участие в <a href="http://ictis.sfedu.ru/news/featured/2020/06/proceedings/">VI Всероссийской научно-технической конференции молодых ученых, аспирантов, магистрантов и студентов «<span data-abbr="ФПАКТИБ">Фундаментальные и прикладные аспекты компьютерных технологий и информационной безопасности</span>»</a>
+								с докладом на тему «Реализация и использование индексов исходного кода в плагине для IntelliJ IDEA» (1 место в секции)
+							</p>
+						</li>
+					</ul>
 				</li>
 				<li class="mopevm ictis sfedu">
-					<p class="dates"><time datetime="2014-09-01">2014</time>&mdash;<time datetime="2018-06-27">2018</time></p>
+					<p class="dates"><time data-date="2014-09-01">2014</time>&mdash;<time data-date="2018-06-27">2018</time></p>
 					<p class="organisation">
 						<a href="https://sfedu.ru" data-abbr="ЮФУ">Южный федеральный университет</a>,
 						<a href="https://ictis.sfedu.ru" data-abbr="ИКТИБ">Институт компьютерных технологий и информационной безопасности</a>,
@@ -90,30 +102,54 @@
 				</li>
 			</ul>
 		</section>
-		<section id="professional">
-			<h2>Опыт работы</h2>
+		<section id="professional" class="ribbon">
+			<h2 class="activity">Опыт работы</h2>
 			<ul>
 				<li class="monitel">
-					<p class="dates"><time datetime="2018-09">2018</time>&mdash;н.в.</p>
+					<p class="dates"><time data-date="2018-09">2018</time>&mdash;<time>н.в.</time></p>
 					<p class="organisation">
 						<a href="https://monitel.com">АО «Монитор Электрик»</a>
 					</p>
 					<p class="activity">Инженер-программист</p>
-					<p class="project netcore">Разработка и поддержка платформенных компонент комплекса СК-11 (.NET Core)</p>
-					<p class="project java">Разработка и поддержка компонент интеграции с СК-11 для внешних систем (Java, Eclipse Platform)</p>
-					<p class="project kotlin android">Поддержка интеграции Android-приложения в СК-11 (Kotlin, Realm)</p>
+					<ul>
+						<li>
+							<p class="project netcore">
+								Разработка и поддержка платформенных компонент комплекса СК-11 (.NET Core)
+							</p>
+						</li>
+						<li>
+							<p class="project java">
+								Разработка и поддержка компонент интеграции с СК-11 для внешних систем (Java, Eclipse Platform)
+							</p>
+						</li>
+						<li>
+							<p class="project kotlin android">
+								Поддержка интеграции Android-приложения в СК-11 (Kotlin, Realm)
+							</p>
+						</li>
+					</ul>
 				</li>
 				<li class="oggetto">
-					<p class="dates"><time datetime="2017-01">2017</time>&mdash;<time datetime="2018-08">2018</time></p>
+					<p class="dates"><time data-date="2017-01">2017</time>&mdash;<time data-date="2018-08">2018</time></p>
 					<p class="organisation">
 						<a href="https://oggettoweb.com">ООО «Оджетто Веб»</a>
 					</p>
 					<p class="activity">Веб-разработчик (бекенд)</p>
-					<p class="project php mysql redis">Поддержка и развитие интернет-магазинов на платформе Magento (PHP, Zend Framework, Nginx, MySQL, Redis, HTML/CSS, JavaScript)</p>
-					<p class="project php">Разработка и поддержка сервисов внутренней инфраструктуры: API Gateway, Bitrix CRM (PHP)</p>
+					<ul>
+						<li>
+							<p class="project php mysql redis">
+								Поддержка и развитие интернет-магазинов на платформе Magento (PHP, Zend Framework, Nginx, MySQL, Redis, HTML/CSS, JavaScript)
+							</p>
+						</li>
+						<li>
+							<p class="project php">
+								Разработка и поддержка сервисов внутренней инфраструктуры: API Gateway, Bitrix CRM (PHP)
+							</p>
+						</li>
+					</ul>
 				</li>
 				<li class="oggetto">
-					<p class="dates"><time datetime="2016-09">2016</time></p>
+					<p class="dates"><time data-date="2016-09">2016</time></p>
 					<p class="organisation">
 						<a href="https://oggettoweb.com">ООО «Оджетто Веб»</a>
 					</p>
@@ -121,55 +157,67 @@
 				</li>
 			</ul>
 		</section>
-		<section id="activities">
-			<h2>Разное</h2>
+		<section id="activities" class="ribbon">
+			<h2 class="activity">Разное</h2>
 			<ul>
 				<li class="icpc">
 					<p class="activity">Участие в полуфинале ACM International Collegiate Programming Contest</p>
-					<p class="award">
-						<time datetime="2019-10">2019 г.</time>:
-						#32 в <a href="http://contest.sgu.ru/history/acm-icpc/standings-2019-qual-southern-neerc.html">Отборочный этап</a>;
-						#27 в <a href="https://contest.sgu.ru/history/acm-icpc/standings2019.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>;
-						#127 в <a href="https://neerc.ifmo.ru/archive/2019/standings.html">NEERC (Чемпионат России и ближнего зарубежья)</a>
-					</p>
-					<p class="award">
-						<time datetime="2018-10">2018 г.</time>:
-						#31 в <a href="http://contest.sgu.ru/history/acm-icpc/standings-2018-qual-southern-neerc.html">Отборочный этап</a>;
-						#35 в <a href="https://contest.sgu.ru/history/acm-icpc/standings2018.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>
-					</p>
-					<p class="award">
-						<time datetime="2017-10">2017 г.</time>:
-						#40 в <a href="http://contest.sgu.ru/history/acm-icpc/standings-2017-qual-southern-neerc.html">Отборочный этап</a>;
-						#23 в <a href="https://contest.sgu.ru/history/acm-icpc/standings2017.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>;
-						#168 в <a href="https://neerc.ifmo.ru/archive/2017/standings.html">NEERC (Чемпионат России и ближнего зарубежья)</a>
-					</p>
-					<p class="award">
-						<time datetime="2016-10">2016 г.</time>:
-						#10 в <a href="https://neerc.ifmo.ru/archive/2016/southern/standings.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>;
-						#135 в <a href="https://neerc.ifmo.ru/archive/2016/standings.html">NEERC (Чемпионат России и ближнего зарубежья)</a>
-					</p>
-					<p class="award">
-						<time datetime="2015-10">2015 г.</time>:
-						#47 в <a href="https://neerc.ifmo.ru/archive/2015/southern/standings.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>
-					</p>
+					<ul>
+						<li>
+							<p class="award">
+								<time data-date="2019-10">2019 г.</time>:
+								#32 в <a href="http://contest.sgu.ru/history/acm-icpc/standings-2019-qual-southern-neerc.html">Отборочный этап</a>;
+								#27 в <a href="https://contest.sgu.ru/history/acm-icpc/standings2019.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>;
+								#127 в <a href="https://neerc.ifmo.ru/archive/2019/standings.html">NEERC (Чемпионат России и ближнего зарубежья)</a>
+							</p>
+						</li>
+						<li>
+							<p class="award">
+								<time data-date="2018-10">2018 г.</time>:
+								#31 в <a href="http://contest.sgu.ru/history/acm-icpc/standings-2018-qual-southern-neerc.html">Отборочный этап</a>;
+								#35 в <a href="https://contest.sgu.ru/history/acm-icpc/standings2018.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>
+							</p>
+						</li>
+						<li>
+							<p class="award">
+								<time data-date="2017-10">2017 г.</time>:
+								#40 в <a href="http://contest.sgu.ru/history/acm-icpc/standings-2017-qual-southern-neerc.html">Отборочный этап</a>;
+								#23 в <a href="https://contest.sgu.ru/history/acm-icpc/standings2017.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>;
+								#168 в <a href="https://neerc.ifmo.ru/archive/2017/standings.html">NEERC (Чемпионат России и ближнего зарубежья)</a>
+							</p>
+						</li>
+						<li>
+							<p class="award">
+								<time data-date="2016-10">2016 г.</time>:
+								#10 в <a href="https://neerc.ifmo.ru/archive/2016/southern/standings.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>;
+								#135 в <a href="https://neerc.ifmo.ru/archive/2016/standings.html">NEERC (Чемпионат России и ближнего зарубежья)</a>
+							</p>
+						</li>
+						<li>
+							<p class="award">
+								<time data-date="2015-10">2015 г.</time>:
+								#47 в <a href="https://neerc.ifmo.ru/archive/2015/southern/standings.html">NEERC, Southern Subregion (Чемпионат Юга и Поволжья)</a>
+							</p>
+						</li>
+					</ul>
 				</li>
 				<li class="yaprofi">
 					<p class="activity">Участие в олимпиаде «Я &mdash; Профессионал»</p>
 					<p class="award">
 						Призёр по направлению «Программирование и информационные технологии»
-						<time datetime="2018-03-15">2018</time>,
-						<time datetime="2020-03-26">2020</time> гг.
+						<time data-date="2018-03-15">2018</time>,
+						<time data-date="2020-03-26">2020</time> гг.
 					</p>
 				</li>
 				<li>
-					<p class="dates"><time datetime="2017-03">03/2017</time></p>
+					<p class="dates"><time data-date="2017-03">03/2017</time></p>
 					<p class="activity">Pet Project</p>
 					<p class="project kotlin android">
 						<a href="Inscriptor/">Inscriptor (Android 4.0, Kotlin)</a>
 					</p>
 				</li>
 				<li class="gnome">
-					<p class="dates"><time datetime="2016-07">2016</time>&mdash;н.в.</p>
+					<p class="dates"><time data-date="2016-07">2016</time>&mdash;<time>н.в.</time></p>
 					<p class="activity">Pet Project</p>
 					<p class="project github javascript">
 						Разработка и поддержка расширения
@@ -179,43 +227,55 @@
 				</li>
 				<li class="annimon no-print">
 					<p class="activity">aNNiMON.com Community</p>
-					<p class="publication">
-						<time datetime="2020-01-16">16/01/2020</time>:
-						<a href="https://annimon.com/article/3763">Platform Invocation в .NET Core</a>
-					</p>
-					<p class="publication">
-						<time datetime="2020-01-11">11/01/2020</time>:
-						<a href="https://annimon.com/article/3730">Оценка идентичности программного кода</a>
-					</p>
-					<p class="publication">
-						<time datetime="2014-11-30">30/11/2014</time>:
-						<a href="https://annimon.com/article/984">Сжатие текстур: S3TC (DXTn)</a>
-					</p>
-					<p class="project java">
-						<time datetime="2013-01-09">09/01/2013</time>:
-						<a href="https://annimon.com/forum/id230490-10#post231229">Игра XMasBall (JavaME)</a>
-					</p>
-					<p class="project java">
-						<time datetime="2011-04-27">27/04/2011</time>:
-						<a href="https://annimon.com/forum/id18513-280#post67224">Игра 3Detris (JavaME)</a>
-					</p>
+					<ul>
+						<li>
+							<p class="publication">
+								<time data-date="2020-01-16">16/01/2020</time>:
+								<a href="https://annimon.com/article/3763">Platform Invocation в .NET Core</a>
+							</p>
+						</li>
+						<li>
+							<p class="publication">
+								<time data-date="2020-01-11">11/01/2020</time>:
+								<a href="https://annimon.com/article/3730">Оценка идентичности программного кода</a>
+							</p>
+						</li>
+						<li>
+							<p class="publication">
+								<time data-date="2014-11-30">30/11/2014</time>:
+								<a href="https://annimon.com/article/984">Сжатие текстур: S3TC (DXTn)</a>
+							</p>
+						</li>
+						<li>
+							<p class="project java">
+								<time data-date="2013-01-09">09/01/2013</time>:
+								<a href="https://annimon.com/forum/id230490-10#post231229">Игра XMasBall (JavaME)</a>
+							</p>
+						</li>
+						<li>
+							<p class="project java">
+								<time data-date="2011-04-27">27/04/2011</time>:
+								<a href="https://annimon.com/forum/id18513-280#post67224">Игра 3Detris (JavaME)</a>
+							</p>
+						</li>
+					</ul>
 				</li>
 				<li class="chgk">
 					<p class="activity">Участие в студенческом и спортивном «Что? Где? Когда?»</p>
 				</li>
 			</ul>
 		</section>
-		<section id="skills">
+		<section id="skills" class="tags">
 			<h2>Профессиональные компетенции</h2>
 			<ul>
 				<li class="like">C# (.NET Core)</li>
 				<li class="like">Kotlin (IDE tooling, Backend, Android)</li>
-				<li class="">Java (для IDE tooling)</li>
+				<li class="">Java (IDE tooling)</li>
 				<li class="">PHP (Zend Framework, Magento)</li>
 				<li class="">MySQL</li>
 				<li class="">Redis</li>
 				<li class="">Nginx</li>
-				<li class="">JavaScript (vanilla)</li>
+				<li class="">HTML/CSS/JavaScript (basic, vanilla)</li>
 				<li class="">C/C++ (competitive, stdlib, cross-runtime interop)</li>
 				<li class="like">Алгоритмы и структуры данных</li>
 				<li class="like">Кросс-платформенная разработка</li>
@@ -227,7 +287,7 @@
 				<li class="">Windows (прикладная разработка)</li>
 			</ul>
 		</section>
-		<section id="learning">
+		<section id="learning" class="tags">
 			<h2>Исследовательские интересы</h2>
 			<ul>
 				<li>Статические анализаторы</li>
@@ -236,7 +296,7 @@
 				<li>Обработка естественных языков</li>
 			</ul>
 		</section>
-		<section id="languages">
+		<section id="languages" class="tags">
 			<h2>Языки</h2>
 			<ul>
 				<li>Русский</li>

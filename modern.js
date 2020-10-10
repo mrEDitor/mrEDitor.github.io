@@ -1,8 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
-  if (location.search == "?print") {
-    var elements = document.querySelectorAll('[data-abbr]');
-    for ( var i = 0; i < elements.length; i++ ) {
-      elements[i].innerHTML = elements[i].dataset['abbr'];
-    }
+document.addEventListener('DOMContentLoaded', function() {
+  const query = new URLSearchParams(location.search);
+
+  if (query.has('print')) {
+    document.querySelectorAll('[data-abbr]').forEach(
+        value => value.innerText = value.dataset['abbr']
+    );
+  }
+
+  if (query.has('phone')) {
+    document.querySelectorAll('#phone').forEach(
+        value => value.innerText = query.get('phone')
+    );
   }
 });

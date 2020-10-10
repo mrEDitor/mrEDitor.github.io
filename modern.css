@@ -1,26 +1,40 @@
-div.no-print {
-    display: block !important;
-}
+@media screen {
+    body {
+        max-width: 100ex;
+        margin: auto;
+        position: relative;
+    }
 
-li.no-print {
-    display: list-item !important;
-}
+    .tags ul {
+        flex-wrap: wrap;
+        display: flex;
+        padding: 0;
+    }
 
-span.no-print {
-    display: inline !important;
-}
+    .tags ul li {
+        display: block;
+        float: left;
+        border: 2px silver outset;
+        border-radius: 1ex;
+        margin: 0.5ex;
+        padding: 2ex;
+    }
 
-html {
-    max-width: 100ex;
-    margin: auto;
-}
+    div.no-print, li.no-print {
+        display: block !important;
+    }
 
-body {
-    position: relative;
-}
+    span.no-print {
+        display: inline !important;
+    }
 
-#whoami img {
-    position: absolute;
-    top: 0;
-    right: 100%;
+    @media (min-width: 150ex) {
+        #whoami img {
+            position: absolute;
+            top: 0;
+            right: 100%;
+            padding: 0 2ex;
+            text-align: right;
+        }
+    }
 }

@@ -20,8 +20,12 @@
         padding: 2ex;
     }
 
-    div.no-print, li.no-print {
+    div.no-print {
         display: block !important;
+    }
+
+    li.no-print {
+        display: list-item !important;
     }
 
     span.no-print {

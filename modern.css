@@ -31,7 +31,6 @@
     @media (min-width: 150ex) {
         #whoami img {
             position: absolute;
-            top: 0;
             right: 100%;
             padding: 0 2ex;
             text-align: right;

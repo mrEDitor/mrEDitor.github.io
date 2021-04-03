@@ -13,6 +13,10 @@ body {
     height: 20ex;
 }
 
+#localization a {
+	text-decoration: none;
+}
+
 header, section {
     border-bottom: black 2px solid;
 }

@@ -13,10 +13,6 @@ body {
     height: 20ex;
 }
 
-#localization {
-	display: none;
-}
-
 #localization a {
 	text-decoration: none;
 }

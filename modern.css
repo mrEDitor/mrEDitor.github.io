@@ -32,6 +32,11 @@
         display: inline !important;
     }
 
+	#localization {
+		display: flex !important;
+		flex-direction: row;
+	}
+
     @media (min-width: 150ex) {
         #whoami img {
             position: absolute;

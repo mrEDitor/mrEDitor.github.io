@@ -9,6 +9,7 @@
         flex-wrap: wrap;
         display: flex;
         padding: 0;
+        columns: 1;
     }
 
     .tags ul li {
@@ -32,25 +33,18 @@
         display: inline !important;
     }
 
-	#localization {
-		display: flex !important;
-		flex-direction: row;
-	}
-
     @media (min-width: 150ex) {
+        #whoami {
+            padding-left: 0;
+        }
+
         #whoami img {
-            position: absolute;
+            left: unset;
             right: 100%;
-            padding: 0 2ex;
-            text-align: right;
         }
 
         #localization {
-			display: flex !important;
-			flex-direction: column;
-            position: absolute;
-            left: 100%;
-            padding: 0 2ex;
+            left: 100% !important;
         }
     }
 }

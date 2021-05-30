@@ -9,19 +9,24 @@
 		<link rel="stylesheet" href="/default.css" />
 		<script src="/modern.js"></script>
 		<script>if (!location.search.startsWith('?print')) document.write('<link rel="stylesheet" href="/modern.css" />');</script>
+		<script>if (location.search.startsWith('?print')) window.print();</script>
 	</head>
 	<body>
 		<header id="whoami">
 			<img src="/me.jpg" alt="photo">
 			<p id="localization" class="no-print">
-				<a href="https://mrEDitor.github.io" title="In English">🇬🇧</a>
-				<a href="https://mrEDitor.github.io/ru/" title="На русском">🇷🇺</a>
+				<a href="/" title="In English">🇬🇧</a>
+				<a href="/ru/" title="На русском">🇷🇺</a>
+				<a href="?print" title="Print version">🖨️</a>
 			</p>
 			<h1>Eduard Minasyan</h1>
 			<p id="phone"></p>
 			<p id="location">
-				<script>document.write((new Date().getFullYear() - 1996).toString())</script>,
-				Taganrog
+				<script>document.write((new Date().getFullYear() - (new Date().getMonth() < 8 ? 1997 : 1996)).toString())</script>,
+				Taganrog, Russia (open for relocation)
+			</p>
+			<p id="languages" class="tags">
+				Russian, English (B1-B2)
 			</p>
 		</header>
 		<section id="contacts" class="tags">
@@ -47,78 +52,45 @@
 				</li>
 			</ul>
 		</section>
-		<section id="education" class="ribbon">
-			<h2 class="activity">Education</h2>
+		<section id="skills" class="tags">
+			<h2>Professional skills and expirience</h2>
 			<ul>
-				<li class="ictis sfedu">
-					<p class="dates"><time data-date="2020-09-01">2020</time>&mdash;<time>present</time></p>
-					<p class="organisation">
-						<a href="https://sfedu.ru" data-abbr="SFedU">Southern Federal University</a>,
-						<a href="https://ictis.sfedu.ru" data-abbr="ICTIS">Institute of computer technologies and information security</a>
-					</p>
-					<p class="activity">09.06.01 "Informatics and computer engineering", post-graduate student</p>
-				</li>
-				<li class="mopevm ictis sfedu">
-					<p class="dates"><time data-date="2018-09-01">2018</time>&mdash;<time data-date="2020-07-16">2020</time></p>
-					<p class="organisation">
-						<a href="https://sfedu.ru" data-abbr="SFedU">Southern Federal University</a>,
-						<a href="https://ictis.sfedu.ru" data-abbr="ICTIS">Institute of computer technologies and information security</a>,
-						<a href="https://sites.google.com/view/mopevm/" data-abbr="MOP EVM dept.">Department of Computer Software</a>
-					</p>
-					<p class="activity">09.04.04 "Software Engineering", master degree</p>
-					<p class="publication">
-						Qualification work:
-						<a href="https://hub.lib.sfedu.ru/repository/material/801281452/">Developing of algorithms and tools for software similarity analysis</a>
-					</p>
-					<ul>
-						<li>
-							<p class="dates"><time data-date="2019-04">04/2019</time></p>
-							<p class="publication">
-								<a href="http://ictis.sfedu.ru/news/featured/2019/05/%d0%be%d0%bf%d1%83%d0%b1%d0%bb%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d0%bd-%d1%81%d0%b1%d0%be%d1%80%d0%bd%d0%b8%d0%ba-v-%d0%b2%d1%81%d0%b5%d1%80%d0%be%d1%81%d1%81%d0%b8%d0%b9%d1%81%d0%ba%d0%be%d0%b9-%d0%bd/">V All-Russian scientific and technical conference of young scientists, post-graduate, graduate and undergraduate students "<span data-abbr="FPAKTIB">Fundamental and applied aspects of computer technology and information security</span>"</a>
-								and "SFedU Science Week" conferences participation with a report on
-								"Problems of plagiarism searching in competitive programming problem submissions using JPlag"
-							</p>
-						</li>
-						<li>
-							<p class="dates"><time data-date="2019-12">12/2019</time></p>
-							<p class="publication">
-								<a href="https://hub.lib.sfedu.ru/repository/material/801271492/">XVII All-Russian scientific conference of young scientists, post-graduate and undergraduate students "<span data-abbr="ITSAU">Information technologies, system analysis and management</span>"</a> conference participation with a report on
-								"Application of graph colouring for static analysis of software source code" (3rd place in section)
-							</p>
-						</li>
-						<li>
-							<p class="dates"><time data-date="2020-04">04/2020</time></p>
-							<p class="publication">
-								<a href="http://ictis.sfedu.ru/news/featured/2020/06/proceedings/">VI All-Russian scientific and technical conference of young scientists, post-graduate, graduate and undergraduate students "<span data-abbr="FPAKTIB">Fundamental and applied aspects of computer technology and information security</span>"</a> conference participation
-								with a report on "Source code indexes implementation and usage in IntelliJ IDEA plugin" (1st place in section)
-							</p>
-						</li>
-					</ul>
-				</li>
-				<li class="mopevm ictis sfedu">
-					<p class="dates"><time data-date="2014-09-01">2014</time>&mdash;<time data-date="2018-06-27">2018</time></p>
-					<p class="organisation">
-						<a href="https://sfedu.ru" data-abbr="SFedU">Southern Federal University</a>,
-						<a href="https://ictis.sfedu.ru" data-abbr="ICTIS">Institute of computer technologies and information security</a>,
-						<a href="https://sites.google.com/view/mopevm/" data-abbr="MOP EVM dept.">Department of Computer Software</a>
-					</p>
-					<p class="activity">09.03.04 "Software Engineering", bachelor degree</p>
-					<p class="publication">
-						Qualification work:
-						<a href="https://hub.lib.sfedu.ru/repository/material/800839761/">Developing a plugin to the LiveStreet platform for the automatic extraction of keywords from blog posts</a>
-					</p>
-				</li>
+				<li class="star">Cross-platform development</li>
+				<li class="star">Algorithms and data stuctures</li>
+				<li class="like">API design (REST, OOP)</li>
+				<li class="like">Unit tests</li>
+				<li class="star">C# (.NET Core, Backend)</li>
+				<li class="like">Kotlin (IDE tooling, Backend, Android)</li>
+				<li class="">JavaScript/TypeScript (Pure, React)</li>
+				<li class="">Java (IDE tooling)</li>
+				<li class="">PHP (Zend Framework, Magento)</li>
+				<li class="">MySQL</li>
+				<li class="">ElasticSearch</li>
+				<li class="">Redis</li>
+				<li class="">C/C++ (competitive, stdlib, cross-runtime interop)</li>
+				<li class="">HTML/CSS</li>
+				<li class="star">Git</li>
+				<li class="">Team Foundation VC</li>
+				<li class="like">Gradle</li>
+				<li class="">Maven</li>
+				<li class="">Python (Scripting)</li>
+				<li class="">Make, CMake</li>
+				<li class="">Bash</li>
+				<li class="">Batch</li>
+				<li class="">PowerScript</li>
+				<li class="like">Linux (advanced user, applications development)</li>
+				<li class="">Windows (applications development)</li>
 			</ul>
 		</section>
 		<section id="professional" class="ribbon">
 			<h2 class="activity">Work experience</h2>
 			<ul>
 				<li class="monitel">
-					<p class="dates"><time data-date="2018-09">2018</time>&mdash;<time>present</time></p>
-					<p class="organisation">
-						<a href="https://monitel.com">JSC "Monitor Electric"</a>
-					</p>
-					<p class="activity">Software Engineer</p>
+					<p class="dates"><time data-date="2018-09">09/2018</time>&mdash;<time>present</time></p>
+					<span class="organisation">
+						<a href="https://monitel.com">Monitor Electric JSC</a>,
+					</span>
+					<span class="activity">Software Engineer (Middle)</span>
 					<ul>
 						<li>
 							<p class="project netcore">
@@ -126,8 +98,13 @@
 							</p>
 						</li>
 						<li>
-							<p class="project java">
-								Developing and maintaining of of CK-11 integration with external systems (Java, Eclipse Platform; Typescript, React)
+							<p class="project netcore typescript react">
+								Developing geographic information subsystem for CK-11 (C#, .NET Core, Signal-R; TypeScript, React)
+							</p>
+						</li>
+						<li>
+							<p class="project java typescript react">
+								Developing and maintaining of CK-11 integration with external systems (Java, Eclipse Platform; TypeScript, React)
 							</p>
 						</li>
 						<li>
@@ -138,11 +115,11 @@
 					</ul>
 				</li>
 				<li class="oggetto">
-					<p class="dates"><time data-date="2017-01">2017</time>&mdash;<time data-date="2018-08">2018</time></p>
-					<p class="organisation">
-						<a href="https://oggettoweb.com">Oggetto Web ltd.</a>
-					</p>
-					<p class="activity">Web Developer (backend)</p>
+					<p class="dates"><time data-date="2017-01">2017</time>&mdash;<time data-date="2018-08">08/2018</time></p>
+					<span class="organisation">
+						<a href="https://oggettoweb.com">Oggetto Web ltd.</a>,
+					</span>
+					<span class="activity">Web Developer (backend)</span>
 					<ul>
 						<li>
 							<p class="project php mysql redis">
@@ -158,78 +135,136 @@
 				</li>
 				<li class="oggetto">
 					<p class="dates"><time data-date="2016-09">Autumn 2016</time></p>
-					<p class="organisation">
-						<a href="https://oggettoweb.com">Oggetto Web ltd.</a>
-					</p>
-					<p class="activity">Trainee</p>
+					<span class="organisation">
+						<a href="https://oggettoweb.com">Oggetto Web ltd.</a>,
+					</span>
+					<span class="activity">Trainee</span>
 				</li>
 			</ul>
 		</section>
-		<section id="activities" class="ribbon">
-			<h2 class="activity">Other</h2>
+		<section id="education" class="ribbon">
+			<h2 class="activity">Education</h2>
 			<ul>
-				<li class="icpc">
-					<p class="activity">Participation in 1/2 of ACM International Collegiate Programming Contest</p>
-					<ul>
+				<li class="ictis sfedu">
+					<p class="dates"><time data-date="2020-09-01">2020</time>&mdash;<time>present</time></p>
+					<span class="organisation">
+						<a href="https://sfedu.ru" data-abbr="SFedU">Southern Federal University</a>,
+						<a href="https://ictis.sfedu.ru" data-abbr="ICTIS">Institute of computer technologies and information security</a>,
+					</span>
+					<span class="activity">09.06.01 "Informatics and computer engineering", post-graduate student</span>
+				</li>
+				<li class="mopevm ictis sfedu">
+					<p class="dates"><time data-date="2018-09-01">2018</time>&mdash;<time data-date="2020-07-16">2020</time></p>
+					<span class="organisation">
+						<a href="https://sfedu.ru" data-abbr="SFedU">Southern Federal University</a>,
+						<a href="https://ictis.sfedu.ru" data-abbr="ICTIS">Institute of computer technologies and information security</a>,
+						<a href="https://sites.google.com/view/mopevm/" data-abbr="MOP EVM dept.">Department of Computer Software</a>,
+					</span>
+					<span class="activity">09.04.04 "Software Engineering", master degree</span>
+					<p class="publication">
+						Qualification work:
+						<a class="lang-ru" title="Work is in Russian" href="https://hub.lib.sfedu.ru/repository/material/801281452/">Developing of algorithms and tools for software similarity analysis</a>
+					</p>
+					<ul class="no-print">
 						<li>
-							<p class="award">
-								<time data-date="2019-10">2019</time>:
-								#32 in <a href="http://contest.sgu.ru/history/acm-icpc/standings-2019-qual-southern-neerc.html">Qualification stage</a>;
-								#27 in <a href="https://contest.sgu.ru/history/acm-icpc/standings2019.html">NEERC, Southern Subregion (Championship of the South and the Volga regions)</a>;
-								#127 in <a href="https://neerc.ifmo.ru/archive/2019/standings.html">NEERC (Championship of Russia and neighboring countries)</a>
+							<p class="dates"><time data-date="2019-04">04/2019</time></p>
+							<p class="publication">
+								<a class="lang-ru" title="Work is in Russian" href="http://ictis.sfedu.ru/news/featured/2019/05/%d0%be%d0%bf%d1%83%d0%b1%d0%bb%d0%b8%d0%ba%d0%be%d0%b2%d0%b0%d0%bd-%d1%81%d0%b1%d0%be%d1%80%d0%bd%d0%b8%d0%ba-v-%d0%b2%d1%81%d0%b5%d1%80%d0%be%d1%81%d1%81%d0%b8%d0%b9%d1%81%d0%ba%d0%be%d0%b9-%d0%bd/">V All-Russian scientific and technical conference of young scientists, post-graduate, graduate and undergraduate students "<span data-abbr="FPAKTIB">Fundamental and applied aspects of computer technology and information security</span>"</a>
+								and "SFedU Science Week" conferences participation with a report on
+								"Problems of plagiarism searching in competitive programming problem submissions using JPlag"
 							</p>
 						</li>
 						<li>
-							<p class="award">
-								<time data-date="2018-10">2018</time>:
-								#31 in <a href="http://contest.sgu.ru/history/acm-icpc/standings-2018-qual-southern-neerc.html">Qualification stage</a>;
-								#35 in <a href="https://contest.sgu.ru/history/acm-icpc/standings2018.html">NEERC, Southern Subregion (Championship of the South and the Volga regions)</a>
+							<p class="dates"><time data-date="2019-12">12/2019</time></p>
+							<p class="publication">
+								<a class="lang-ru" title="Work is in Russian" href="https://hub.lib.sfedu.ru/repository/material/801271492/">XVII All-Russian scientific conference of young scientists, post-graduate and undergraduate students "<span data-abbr="ITSAU">Information technologies, system analysis and management</span>"</a> conference participation with a report on
+								"Application of graph colouring for static analysis of software source code" (3rd place in section)
 							</p>
 						</li>
 						<li>
-							<p class="award">
-								<time data-date="2017-10">2017</time>:
-								#40 in <a href="http://contest.sgu.ru/history/acm-icpc/standings-2017-qual-southern-neerc.html">Qualification stage</a>;
-								#23 in <a href="https://contest.sgu.ru/history/acm-icpc/standings2017.html">NEERC, Southern Subregion (Championship of the South and the Volga regions)</a>;
-								#168 in <a href="https://neerc.ifmo.ru/archive/2017/standings.html">NEERC (Championship of Russia and neighboring countries)</a>
-							</p>
-						</li>
-						<li>
-							<p class="award">
-								<time data-date="2016-10">2016</time>:
-								#10 in <a href="https://neerc.ifmo.ru/archive/2016/southern/standings.html">NEERC, Southern Subregion (Championship of the South and the Volga regions)</a>;
-								#135 in <a href="https://neerc.ifmo.ru/archive/2016/standings.html">NEERC (Championship of Russia and neighboring countries)</a>
-							</p>
-						</li>
-						<li>
-							<p class="award">
-								<time data-date="2015-10">2015</time>:
-								#47 in <a href="https://neerc.ifmo.ru/archive/2015/southern/standings.html">NEERC, Southern Subregion (Championship of the South and the Volga regions)</a>
+							<p class="dates"><time data-date="2020-04">04/2020</time></p>
+							<p class="publication">
+								<a class="lang-ru" title="Work is in Russian" href="http://ictis.sfedu.ru/news/featured/2020/06/proceedings/">VI All-Russian scientific and technical conference of young scientists, post-graduate, graduate and undergraduate students "<span data-abbr="FPAKTIB">Fundamental and applied aspects of computer technology and information security</span>"</a> conference participation
+								with a report on "Source code indexes implementation and usage in IntelliJ IDEA plugin" (1st place in section)
 							</p>
 						</li>
 					</ul>
 				</li>
+				<li class="mopevm ictis sfedu">
+					<p class="dates"><time data-date="2014-09-01">2014</time>&mdash;<time data-date="2018-06-27">2018</time></p>
+					<span class="organisation">
+						<a href="https://sfedu.ru" data-abbr="SFedU">Southern Federal University</a>,
+						<a href="https://ictis.sfedu.ru" data-abbr="ICTIS">Institute of computer technologies and information security</a>,
+						<a href="https://sites.google.com/view/mopevm/" data-abbr="MOP EVM dept.">Department of Computer Software</a>,
+					</span>
+					<span class="activity">09.03.04 "Software Engineering", bachelor degree</span>
+					<p class="publication">
+						Qualification work:
+						<a class="lang-ru" title="Work is in Russian" href="https://hub.lib.sfedu.ru/repository/material/800839761/">Developing a plugin to the LiveStreet platform for the automatic extraction of keywords from blog posts</a>
+					</p>
+				</li>
+			</ul>
+		</section>
+		<section id="activities" class="ribbon">
+			<h2 class="activity">Competitions and hobbies</h2>
+			<ul>
+				<li class="icpc">
+					<p class="activity">Participation in ACM International Collegiate Programming Contest semifinals</p>
+					<p class="award">
+						<ul>
+							<li>
+								<a href="http://contest.sgu.ru/history/acm-icpc/standings-2019-qual-southern-neerc.html">#32 (2019)</a>,
+								<a href="http://contest.sgu.ru/history/acm-icpc/standings-2018-qual-southern-neerc.html">#31 (2018)</a>,
+								<a href="http://contest.sgu.ru/history/acm-icpc/standings-2017-qual-southern-neerc.html">#40 (2017)</a>
+								in qualification stages;
+							</li>
+							<li>
+								<a href="https://contest.sgu.ru/history/acm-icpc/standings2019.html">#27 (2019)</a>,
+								<a href="https://contest.sgu.ru/history/acm-icpc/standings2018.html">#35 (2018)</a>,
+								<a href="https://contest.sgu.ru/history/acm-icpc/standings2017.html">#23 (2017)</a>,
+								<a href="https://neerc.ifmo.ru/archive/2016/southern/standings.html">#10 (2016)</a>,
+								<a href="https://neerc.ifmo.ru/archive/2015/southern/standings.html">#47 (2015)</a>
+								in NEERC, Southern Subregion (Championship of the South and the Volga regions)
+							</li>
+							<li>
+								<a href="https://neerc.ifmo.ru/archive/2019/standings.html">#127 (2019)</a>,
+								<a href="https://neerc.ifmo.ru/archive/2017/standings.html">#168 (2017)</a>,
+								<a href="https://neerc.ifmo.ru/archive/2016/standings.html">#135 (2016)</a>
+								in NEERC (Championship of Russia and neighboring countries)
+							</li>
+						</ul>
+					</p>
+				</li>
 				<li class="yaprofi">
 					<p class="activity">Participation in «I'm a Professional»</p>
 					<p class="award">
-						«Programming and information technologies» section awardee
-						<time data-date="2018-03-15">2018</time>,
-						<time data-date="2020-03-26">2020</time> years
+						<ul>
+							<li>
+								«Programming and information technologies» section awardee
+								<time data-date="2018-03-15">2018</time>,
+								<time data-date="2020-03-26">2020</time> years
+							</li>
+						</ul>
 					</p>
 				</li>
 				<li>
-					<p class="dates"><time data-date="2017-03">03/2017</time></p>
-					<p class="activity">Pet Project</p>
+					<p>
+						Participation in student competitions and <a href="https://codeforces.com/profile/mrEDitor">online competitions on CodeForces.com</a>
+					</p>
+				</li>
+				<li>
+					<span class="dates"><time data-date="2017-03">03/2017</time></span>,
+					<span class="activity">Pet Project</span>
 					<p class="project kotlin android">
-						<a href="/Inscriptor/">Inscriptor (Android 4.0, Kotlin)</a>
+						Developing <a class="lang-ru" title="Page is in Russian" href="/Inscriptor/">Inscriptor (Android 4.0, Kotlin)</a> mobile application
 					</p>
 				</li>
 				<li class="gnome">
-					<p class="dates"><time data-date="2016-07">2016</time>&mdash;<time>present</time></p>
-					<p class="activity">Pet Project</p>
+					<span class="dates"><time data-date="2016-07">2016</time>&mdash;<time>present</time></span>,
+					<span class="activity">Pet Project</span>
 					<p class="project github javascript">
-						Developing and supporting
-						<a href="https://extensions.gnome.org/extension/1096/scroll-panel/">Scroll Panel</a>
+						Developing and maintaining
+						<a href="https://extensions.gnome.org/extension/4257/scroll-panel/">Scroll Panel</a>
 						extension for Gnome Shell (JavaScript)
 					</p>
 				</li>
@@ -239,19 +274,19 @@
 						<li>
 							<p class="publication">
 								<time data-date="2020-01-16">16/01/2020</time>:
-								<a href="https://annimon.com/article/3763">Platform Invocation in .NET Core</a>
+								<a class="lang-ru" title="Work is in Russian" href="https://annimon.com/article/3763">Platform Invocation in .NET Core</a>
 							</p>
 						</li>
 						<li>
 							<p class="publication">
 								<time data-date="2020-01-11">11/01/2020</time>:
-								<a href="https://annimon.com/article/3730">Program code similarity measuring</a>
+								<a class="lang-ru" title="Work is in Russian" href="https://annimon.com/article/3730">Program code similarity measuring</a>
 							</p>
 						</li>
 						<li>
 							<p class="publication">
 								<time data-date="2014-11-30">30/11/2014</time>:
-								<a href="https://annimon.com/article/984">Textures compression: S3TC (DXTn)</a>
+								<a class="lang-ru" title="Work is in Russian" href="https://annimon.com/article/984">Textures compression: S3TC (DXTn)</a>
 							</p>
 						</li>
 						<li>
@@ -275,28 +310,6 @@
 				</li>
 			</ul>
 		</section>
-		<section id="skills" class="tags">
-			<h2>Professional skills</h2>
-			<ul>
-				<li class="like">C# (.NET Core)</li>
-				<li class="like">Kotlin (IDE tooling, Backend, Android)</li>
-				<li class="">Java (IDE tooling)</li>
-				<li class="">PHP (Zend Framework, Magento)</li>
-				<li class="">MySQL</li>
-				<li class="">Redis</li>
-				<li class="">Nginx</li>
-				<li class="">HTML/CSS/JavaScript (basic, vanilla)</li>
-				<li class="">C/C++ (competitive, stdlib, cross-runtime interop)</li>
-				<li class="like">Algorithms and data stuctures</li>
-				<li class="like">Cross-platform development</li>
-				<li class="like">API design</li>
-				<li class="like">Unit tests</li>
-				<li class="like">Git</li>
-				<li class="">Team Foundation VC</li>
-				<li class="like">Linux (advanced user, applications development)</li>
-				<li class="">Windows (applications development)</li>
-			</ul>
-		</section>
 		<section id="learning" class="tags">
 			<h2>Research interests</h2>
 			<ul>
@@ -307,17 +320,11 @@
 				<li>Formal Verification</li>
 			</ul>
 		</section>
-		<section id="languages" class="tags">
-			<h2>Languages</h2>
-			<ul>
-				<li>Russian</li>
-				<li>English (intermediate)</li>
-			</ul>
-		</section>
 		<footer>
 			&copy;
 			<script>document.write(new Date().getFullYear().toString())</script>
 			<a href="https://mrEDitor.github.io">mrEDitor.github.io</a>
+			<script>if (location.search.startsWith('?print')) document.write('(shortened print version)');</script>
 		</footer>
 	</body>
 </html>

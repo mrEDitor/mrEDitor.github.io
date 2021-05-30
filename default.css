@@ -3,24 +3,48 @@ body {
 }
 
 #whoami {
-    min-height: 21ex;
+    min-height: 22ex;
+    padding-left: 22ex;
+    position: relative;
 }
 
 #whoami img {
-    float: left;
-    padding: 0 2ex;
+    position: absolute;
+    padding-right: 2ex;
+    left: 0;
+    top: 0;
     width: 20ex;
     height: 20ex;
 }
 
+#localization {
+    display: flex !important;
+    flex-direction: column;
+    font-size: 2rem;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 #localization a {
-	font-size: 2rem;
 	margin: 0 0.4rem;
 	text-decoration: none;
 }
 
 header, section {
     border-bottom: black 2px solid;
+}
+
+h2 {
+    page-break-inside: avoid;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin-bottom: -8rem;
 }
 
 footer {
@@ -33,4 +57,25 @@ ul {
 
 .no-print {
     display: none;
+}
+
+.tags ul {
+    columns: 3;
+}
+
+.lang-ru::after {
+    content: "🇷🇺";
+    font-size: 0.8rem;
+    padding: 0.5ex;
+    vertical-align: super;
+}
+
+@media print {
+    a, a:visited {
+        color: darkblue;
+    }
+
+    p {
+        margin: 0.25rem;
+    }
 }

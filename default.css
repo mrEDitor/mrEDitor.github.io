@@ -55,19 +55,26 @@ ul {
     padding-left: 4ex;
 }
 
+li {
+    break-inside: avoid;
+    list-style: "\2022   ";
+    list-style-position: outside;
+}
+
+li.star {
+    list-style: "\2605  ";
+}
+
+li.like {
+    list-style: "\2665  ";
+}
+
 .no-print {
     display: none;
 }
 
 .tags ul {
     columns: 3;
-}
-
-.lang-ru::after {
-    content: "🇷🇺";
-    font-size: 0.8rem;
-    padding: 0.5ex;
-    vertical-align: super;
 }
 
 @media print {
@@ -77,5 +84,9 @@ ul {
 
     p {
         margin: 0.25rem;
+    }
+
+    #localization {
+        display: none !important;
     }
 }

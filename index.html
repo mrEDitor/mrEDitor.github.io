@@ -14,10 +14,15 @@
 	<body>
 		<header id="whoami">
 			<img src="/me.jpg" alt="photo">
-			<p id="localization" class="no-print">
+			<p id="localization">
 				<a href="/" title="In English">🇬🇧</a>
 				<a href="/ru/" title="На русском">🇷🇺</a>
-				<a href="?print" title="Print version">🖨️</a>
+				<script>
+					document.write(location.search.startsWith('?print')
+							? '<a href="?" title="Full version">🖥️️</a>'
+							: '<a href="?print" title="Print version">🖨️</a>'
+					);
+				</script>
 			</p>
 			<h1>Eduard Minasyan</h1>
 			<p id="phone"></p>
@@ -74,7 +79,8 @@
 				<li class="like">Gradle</li>
 				<li class="">Maven</li>
 				<li class="">Python (Scripting)</li>
-				<li class="">Make, CMake</li>
+				<li class="">Make</li>
+				<li class="">CMake</li>
 				<li class="">Bash</li>
 				<li class="">Batch</li>
 				<li class="">PowerScript</li>
@@ -226,7 +232,7 @@
 								<a href="https://neerc.ifmo.ru/archive/2015/southern/standings.html">#47 (2015)</a>
 								in NEERC, Southern Subregion (Championship of the South and the Volga regions)
 							</li>
-							<li>
+							<li class="star">
 								<a href="https://neerc.ifmo.ru/archive/2019/standings.html">#127 (2019)</a>,
 								<a href="https://neerc.ifmo.ru/archive/2017/standings.html">#168 (2017)</a>,
 								<a href="https://neerc.ifmo.ru/archive/2016/standings.html">#135 (2016)</a>
@@ -259,7 +265,7 @@
 						Developing <a class="lang-ru" title="Page is in Russian" href="/Inscriptor/">Inscriptor (Android 4.0, Kotlin)</a> mobile application
 					</p>
 				</li>
-				<li class="gnome">
+				<li class="like gnome">
 					<span class="dates"><time data-date="2016-07">2016</time>&mdash;<time>present</time></span>,
 					<span class="activity">Pet Project</span>
 					<p class="project github javascript">

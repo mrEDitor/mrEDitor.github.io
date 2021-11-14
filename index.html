@@ -14,6 +14,17 @@
 	<body>
 		<header id="whoami">
 			<img src="/me.jpg" alt="photo">
+			<div>
+				<h1>Eduard Minasyan</h1>
+				<p id="phone"></p>
+				<p id="location">
+					<script>document.write((new Date().getFullYear() - (new Date().getMonth() < 8 ? 1997 : 1996)).toString())</script>,
+					Taganrog, Russia (open for relocation)
+				</p>
+				<p id="languages" class="tags">
+					Russian, English (B1-B2)
+				</p>
+			</div>
 			<p id="localization">
 				<a href="/" title="In English">🇬🇧</a>
 				<a href="/ru/" title="На русском">🇷🇺</a>
@@ -23,15 +34,6 @@
 							: '<a href="?print" title="Print version">🖨️</a>'
 					);
 				</script>
-			</p>
-			<h1>Eduard Minasyan</h1>
-			<p id="phone"></p>
-			<p id="location">
-				<script>document.write((new Date().getFullYear() - (new Date().getMonth() < 8 ? 1997 : 1996)).toString())</script>,
-				Taganrog, Russia (open for relocation)
-			</p>
-			<p id="languages" class="tags">
-				Russian, English (B1-B2)
 			</p>
 		</header>
 		<section id="contacts" class="tags">
@@ -64,7 +66,7 @@
 				<li class="star">Algorithms and data stuctures</li>
 				<li class="like">API design (REST, OOP)</li>
 				<li class="like">Unit tests</li>
-				<li class="star">C# (.NET Core, Backend)</li>
+				<li class="star">C# (.NET Core, Backend, WebView interop)</li>
 				<li class="like">Kotlin (IDE tooling, Backend, Android)</li>
 				<li class="">JavaScript/TypeScript (Pure, React)</li>
 				<li class="">Java (IDE tooling)</li>
@@ -311,7 +313,7 @@
 				</li>
 				<li class="chgk">
 					<p class="activity">
-						<a href="https://rating.chgk.info/player/148679">Participating</a> in student and competitive «What? Where? When?» game
+						<a href="https://rating.chgk.info/player/148679">Participating</a> in student and competitive "What? Where? When?" game
 					</p>
 				</li>
 			</ul>

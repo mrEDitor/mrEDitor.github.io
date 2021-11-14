@@ -68,12 +68,13 @@
         }
 
         #whoami img {
-            left: unset;
+            position: absolute;
             right: 100%;
         }
 
         #localization {
-            left: 100% !important;
+            position: absolute;
+            left: 100%;
         }
     }
 }

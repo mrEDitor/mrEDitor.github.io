@@ -3,28 +3,26 @@ body {
 }
 
 #whoami {
+    display: flex;
     min-height: 22ex;
-    padding-left: 22ex;
     position: relative;
 }
 
+#whoami > div {
+    flex-grow: 1;
+}
+
 #whoami img {
-    position: absolute;
     padding-right: 2ex;
-    left: 0;
-    top: 0;
     width: 20ex;
     height: 20ex;
 }
 
 #localization {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     font-size: 2rem;
     margin: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 
 #localization a {

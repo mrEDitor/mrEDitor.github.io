@@ -22,7 +22,7 @@
 					Taganrog, Russia (open for relocation)
 				</p>
 				<p id="languages" class="tags">
-					Russian, English (B1-B2)
+					Russian, English
 				</p>
 			</div>
 			<p id="localization">
@@ -31,7 +31,7 @@
 				<script>
 					document.write(location.search.startsWith('?print')
 							? '<a href="?" title="Full version">🖥️️</a>'
-							: '<a href="?print" title="Print version">🖨️</a>'
+							: '<a href="?print" title="Printable version">🖨️</a>'
 					);
 				</script>
 			</p>
@@ -40,16 +40,10 @@
 			<h2>Contact Info</h2>
 			<ul>
 				<li>
-					<a href="mailto:mrEDitor@ya.ru">mrEDitor@ya.ru</a>
-				</li>
-				<li class="telegram">
-					<a href="https://t.me/eminasyan">t.me/eminasyan</a>
+					<a href="mailto:mrEDitor.nvr@gmail.com">mrEDitor.nvr@gmail.com</a>
 				</li>
 				<li class="linkedin">
 					<a href="https://linkedin.com/in/mrEDitor">linkedin.com/in/mrEDitor</a>
-				</li>
-				<li class="vk">
-					<a href="https://vk.com/mrEDitor">vk.com/mrEDitor</a>
 				</li>
 				<li class="github">
 					<a href="https://github.com/mrEDitor">github.com/mrEDitor</a>
@@ -66,58 +60,95 @@
 				<li class="star">Algorithms and data stuctures</li>
 				<li class="like">API design (REST, OOP)</li>
 				<li class="like">Unit tests</li>
-				<li class="star">C# (.NET Core, Backend, WebView interop)</li>
+				<li class="star">C# (.NET, Backend, WebView interop, xUnit)</li>
 				<li class="like">Kotlin (IDE tooling, Backend, Android)</li>
-				<li class="">JavaScript/TypeScript (Pure, React)</li>
+				<li class="">JavaScript/TypeScript (Vanilla, React, GTK)</li>
 				<li class="">Java (IDE tooling)</li>
 				<li class="">PHP (Zend Framework, Magento)</li>
 				<li class="">MySQL</li>
+				<li class="">Nginx</li>
 				<li class="">ElasticSearch</li>
 				<li class="">Redis</li>
-				<li class="">C/C++ (competitive, stdlib, cross-runtime interop)</li>
+				<li class="">C/C++ (competitive, stdlib, cross-runtime interop, GTest)</li>
 				<li class="">HTML/CSS</li>
 				<li class="star">Git</li>
 				<li class="">Team Foundation VC</li>
-				<li class="like">Gradle</li>
+				<li class="">Github CI</li>
+				<li class="">Azure DevOps CI</li>
+				<li class="">npm</li>
+				<li class="like">yarn</li>
+				<li class="">NuGet</li>
+				<li class="">MsBuild</li>
+				<li class="">Gradle</li>
 				<li class="">Maven</li>
 				<li class="">Python (Scripting)</li>
 				<li class="">Make</li>
 				<li class="">CMake</li>
 				<li class="">Bash</li>
 				<li class="">Batch</li>
-				<li class="">PowerScript</li>
+				<li class="">PowerShell</li>
+				<li class="">Docker</li>
+				<li class="">Podman</li>
 				<li class="like">Linux (advanced user, applications development)</li>
 				<li class="">Windows (applications development)</li>
 			</ul>
 		</section>
+		<section id="learning" class="tags">
+			<h2>Research and professional interests</h2>
+			<ul>
+				<li>Open Source software</li>
+				<li>Product development</li>
+				<li>Programming tools development</li>
+				<li>Static Analysis</li>
+				<li>Program Translation</li>
+				<li>Formal Verification</li>
+				<li>Graph databases</li>
+				<li>Natural Language Processing</li>
+			</ul>
+		</section>
 		<section id="professional" class="ribbon">
-			<h2 class="activity">Work experience</h2>
+			<h2 class="activity">
+				Work experience
+				(<script>document.write((new Date().getFullYear() - (new Date().getMonth() < 8 ? 2017 : 2016)).toString())</script> years)
+			</h2>
 			<ul>
 				<li class="monitel">
 					<p class="dates"><time data-date="2018-09">09/2018</time>&mdash;<time>present</time></p>
 					<span class="organisation">
 						<a href="https://monitel.com">Monitor Electric JSC</a>,
 					</span>
-					<span class="activity">Software Engineer (Middle)</span>
+					<span class="activity">Senior Software Engineer</span>
 					<ul>
 						<li>
 							<p class="project netcore">
-								Developing and maintaining of CK-11 platform components (C#, .NET Core)
+								Developing and maintaining of CK-11 platform components
+							</p>
+							<p class="technologies">
+								C#, .NET Core 2-3, .NET 5-6, Nginx
 							</p>
 						</li>
 						<li>
 							<p class="project netcore typescript react">
-								Developing geographic information subsystem for CK-11 (C#, .NET Core, Signal-R; TypeScript, React)
+								Developing geographic information subsystem for CK-11
+							</p>
+							<p class="technologies">
+								C#, .NET 6, WPF, WebView, Signal-R, Nginx, MS SQL, PostgreSQL; TypeScript, React; PowerShell
 							</p>
 						</li>
 						<li>
 							<p class="project java typescript react">
-								Developing and maintaining of CK-11 integration with external systems (Java, Eclipse Platform; TypeScript, React)
+								Developing and maintaining of CK-11 REST APIs and other integrations with external systems
+							</p>
+							<p class="technologies">
+								Java 8, Eclipse Platform, JasperReports Platfom; TypeScript, React, CodeMirror
 							</p>
 						</li>
 						<li>
 							<p class="project kotlin android">
-								Maintaining Android application integration with CK-11 (Kotlin, Realm)
+								Maintaining Android application integration with CK-11
+							</p>
+							<p class="technologies">
+								Kotlin, Realm
 							</p>
 						</li>
 					</ul>
@@ -131,12 +162,18 @@
 					<ul>
 						<li>
 							<p class="project php mysql redis">
-								Developing and maintaining of Magento-based online stores (PHP, Zend Framework, Nginx, MySQL, Redis, HTML/CSS, JavaScript)
+								Developing and maintaining of online stores
+							</p>
+							<p class="technologies">
+								Magento 1-2, PHP 5-7, Zend Framework, Nginx, MySQL, Redis, ElasticSearch, JavaScript
 							</p>
 						</li>
 						<li>
 							<p class="project php">
-								Developing and maintaining internal infrastucture services: API Gateway, Bitrix CRM (PHP)
+								Developing and maintaining internal infrastucture services: API Gateway, Bitrix CRM
+							</p>
+							<p class="technologies">
+								PHP, Zend Framework, MySQL, JavaScript
 							</p>
 						</li>
 					</ul>
@@ -153,14 +190,6 @@
 		<section id="education" class="ribbon">
 			<h2 class="activity">Education</h2>
 			<ul>
-				<li class="ictis sfedu">
-					<p class="dates"><time data-date="2020-09-01">2020</time>&mdash;<time>present</time></p>
-					<span class="organisation">
-						<a href="https://sfedu.ru" data-abbr="SFedU">Southern Federal University</a>,
-						<a href="https://ictis.sfedu.ru" data-abbr="ICTIS">Institute of computer technologies and information security</a>,
-					</span>
-					<span class="activity">09.06.01 "Informatics and computer engineering", post-graduate student</span>
-				</li>
 				<li class="mopevm ictis sfedu">
 					<p class="dates"><time data-date="2018-09-01">2018</time>&mdash;<time data-date="2020-07-16">2020</time></p>
 					<span class="organisation">
@@ -172,6 +201,7 @@
 					<p class="publication">
 						Qualification work:
 						<a class="lang-ru" title="Work is in Russian" href="https://hub.lib.sfedu.ru/repository/material/801281452/">Developing of algorithms and tools for software similarity analysis</a>
+						(Java, Kotlin, IntelliJ IDEA Platform)
 					</p>
 					<ul class="no-print">
 						<li>
@@ -209,6 +239,7 @@
 					<p class="publication">
 						Qualification work:
 						<a class="lang-ru" title="Work is in Russian" href="https://hub.lib.sfedu.ru/repository/material/800839761/">Developing a plugin to the LiveStreet platform for the automatic extraction of keywords from blog posts</a>
+						(PHP, LiveStreet CMS, MySQL; Kotlin, DAO, Exposed)
 					</p>
 				</li>
 			</ul>
@@ -244,11 +275,11 @@
 					</p>
 				</li>
 				<li class="yaprofi">
-					<p class="activity">Participation in «I'm a Professional»</p>
+					<p class="activity">Participation in Yandex's "I'm a Professional" programming context</p>
 					<p class="award">
 						<ul>
 							<li>
-								«Programming and information technologies» section awardee
+								"Programming and information technologies" section awardee
 								<time data-date="2018-03-15">2018</time>,
 								<time data-date="2020-03-26">2020</time> years
 							</li>
@@ -271,9 +302,17 @@
 					<span class="dates"><time data-date="2016-07">2016</time>&mdash;<time>present</time></span>,
 					<span class="activity">Pet Project</span>
 					<p class="project github javascript">
-						Developing and maintaining
+						Developing and maintaining Gnome Shell extension
 						<a href="https://extensions.gnome.org/extension/4257/scroll-panel/">Scroll Panel</a>
-						extension for Gnome Shell (JavaScript)
+						(JavaScript, GTK, yarn, podman) and contibuting to other extensions
+					</p>
+				</li>
+				<li>
+					<span class="dates"><time data-date="2015">2015</time></span>,
+					<span class="activity">Collaborative Pet Project</span>
+					<p class="project github java">
+						Developing
+						<a href="https://github.com/NoticEditorTeam/NoticEditor">NoticEditor</a>
 					</p>
 				</li>
 				<li class="annimon no-print">
@@ -318,21 +357,11 @@
 				</li>
 			</ul>
 		</section>
-		<section id="learning" class="tags">
-			<h2>Research interests</h2>
-			<ul>
-				<li>Graph databases</li>
-				<li>Natural Language Processing</li>
-				<li>Static Analysis</li>
-				<li>Program Translation</li>
-				<li>Formal Verification</li>
-			</ul>
-		</section>
 		<footer>
 			&copy;
 			<script>document.write(new Date().getFullYear().toString())</script>
 			<a href="https://mrEDitor.github.io">mrEDitor.github.io</a>
-			<script>if (location.search.startsWith('?print')) document.write('(shortened print version)');</script>
+			<script>if (location.search.startsWith('?print')) document.write('(shortened printable version)');</script>
 		</footer>
 	</body>
 </html>

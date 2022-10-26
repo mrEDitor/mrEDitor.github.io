@@ -32,20 +32,20 @@
 
     .tags ul li.star::before {
         content: "\2605";
-        color: gold;
+        color: rgb(255, 240, 158);
         font-size: 3rem;
         position: absolute;
-        left: -1rem;
+        left: -0.5rem;
         bottom: -0.25rem;
         z-index: -100;
     }
 
     .tags ul li.like::before {
         content: "\2665";
-        color: indianred;
+        color: rgb(238, 186, 186);
         font-size: 3rem;
         position: absolute;
-        left: -1rem;
+        left: -0.5rem;
         bottom: -0.25rem;
         z-index: -100;
     }

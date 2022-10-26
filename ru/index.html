@@ -14,6 +14,17 @@
 	<body>
 		<header id="whoami">
 			<img src="/me.jpg" alt="photo">
+			<div>
+				<h1>Эдуард Минасян</h1>
+				<p id="phone"></p>
+				<p id="location">
+					<script>document.write((new Date().getFullYear() - (new Date().getMonth() < 8 ? 1997 : 1996)).toString())</script>,
+					Таганрог, Россия (готов к переезду)
+				</p>
+				<p id="languages" class="tags">
+					Русский, Английский
+				</p>
+			</div>
 			<p id="localization">
 				<a href="/" title="In English">🇬🇧</a>
 				<a href="/ru/" title="На русском">🇷🇺</a>
@@ -24,30 +35,15 @@
 					);
 				</script>
 			</p>
-			<h1>Эдуард Минасян</h1>
-			<p id="phone"></p>
-			<p id="location">
-				<script>document.write((new Date().getFullYear() - (new Date().getMonth() < 8 ? 1997 : 1996)).toString())</script>,
-				Таганрог, Россия (готов к переезду)
-			</p>
-			<p id="languages" class="tags">
-				Русский, Английский (B1-B2)
-			</p>
 		</header>
 		<section id="contacts" class="tags">
 			<h2>Контактные данные</h2>
 			<ul>
 				<li>
-					<a href="mailto:mrEDitor@ya.ru">mrEDitor@ya.ru</a>
-				</li>
-				<li class="telegram">
-					<a href="https://t.me/eminasyan">t.me/eminasyan</a>
+					<a href="mailto:mrEDitor.nvr@gmail.com">mrEDitor.nvr@gmail.com</a>
 				</li>
 				<li class="linkedin">
 					<a href="https://linkedin.com/in/mrEDitor">linkedin.com/in/mrEDitor</a>
-				</li>
-				<li class="vk">
-					<a href="https://vk.com/mrEDitor">vk.com/mrEDitor</a>
 				</li>
 				<li class="github">
 					<a href="https://github.com/mrEDitor">github.com/mrEDitor</a>
@@ -64,58 +60,95 @@
 				<li class="star">Алгоритмы и структуры данных</li>
 				<li class="like">Проектирование API (REST, ООП)</li>
 				<li class="like">Unit-тестирование</li>
-				<li class="star">C# (.NET Core, Backend, WebView interop)</li>
+				<li class="star">C# (.NET, Backend, WebView interop, xUnit)</li>
 				<li class="like">Kotlin (IDE tooling, Backend, Android)</li>
-				<li class="">JavaScript/TypeScript (Pure, React)</li>
+				<li class="">JavaScript/TypeScript (Vanilla, React, GTK)</li>
 				<li class="">Java (IDE tooling)</li>
 				<li class="">PHP (Zend Framework, Magento)</li>
 				<li class="">MySQL</li>
+				<li class="">Nginx</li>
 				<li class="">ElasticSearch</li>
 				<li class="">Redis</li>
-				<li class="">C/C++ (competitive, stdlib, cross-runtime interop)</li>
+				<li class="">C/C++ (competitive, stdlib, cross-runtime interop, GTest)</li>
 				<li class="">HTML/CSS</li>
 				<li class="star">Git</li>
 				<li class="">Team Foundation VC</li>
-				<li class="like">Gradle</li>
+				<li class="">Github CI</li>
+				<li class="">Azure DevOps CI</li>
+				<li class="">npm</li>
+				<li class="like">yarn</li>
+				<li class="">NuGet</li>
+				<li class="">MsBuild</li>
+				<li class="">Gradle</li>
 				<li class="">Maven</li>
 				<li class="">Python (Scripting)</li>
 				<li class="">Make</li>
 				<li class="">CMake</li>
 				<li class="">Bash</li>
 				<li class="">Batch</li>
-				<li class="">PowerScript</li>
+				<li class="">PowerShell</li>
+				<li class="">Docker</li>
+				<li class="">Podman</li>
 				<li class="like">Linux (прикладная разработка, уверенный пользователь)</li>
 				<li class="">Windows (прикладная разработка)</li>
 			</ul>
 		</section>
+		<section id="learning" class="tags">
+			<h2>Исследовательские и профессиональные интересы</h2>
+			<ul>
+				<li>Открытое программное обеспечение</li>
+				<li>Продуктовая разработка</li>
+				<li>Разработка средств программирования</li>
+				<li>Статические анализаторы</li>
+				<li>Трансляторы</li>
+				<li>Формальная верификация</li>
+				<li>Графовые базы данных</li>
+				<li>Обработка естественных языков</li>
+			</ul>
+		</section>
 		<section id="professional" class="ribbon">
-			<h2 class="activity">Опыт работы</h2>
+			<h2 class="activity">
+				Опыт работы
+				(<script>document.write((new Date().getFullYear() - (new Date().getMonth() < 8 ? 2017 : 2016)).toString())</script> years)
+			</h2>
 			<ul>
 				<li class="monitel">
 					<p class="dates"><time data-date="2018-09">09/2018</time>&mdash;<time>н.в.</time></p>
 					<span class="organisation">
 						<a href="https://monitel.com">АО «Монитор Электрик»</a>,
 					</span>
-					<span class="activity">Инженер-программист 1-ой категории</span>
+					<span class="activity">Старший инженер-программист</span>
 					<ul>
 						<li>
 							<p class="project netcore">
-								Разработка и сопровождение платформенных компонент комплекса СК-11 (C#, .NET Core)
+								Разработка и сопровождение платформенных компонент комплекса СК-11
+							</p>
+							<p class="technologies">
+								C#, .NET Core 2-3, .NET 5-6, Nginx
 							</p>
 						</li>
 						<li>
 							<p class="project netcore typescript react">
-								Разработка компонент геоинформационной подсистемы комплекса СК-11 (C#, .NET Core, Signal-R; TypeScript, React)
+								Разработка компонент геоинформационной подсистемы комплекса СК-11
+							</p>
+							<p class="technologies">
+								C#, .NET 6, WPF, WebView, Signal-R, Nginx, MS SQL, PostgreSQL; TypeScript, React; PowerShell
 							</p>
 						</li>
 						<li>
 							<p class="project java typescript react">
-								Разработка и сопровождение компонент интеграции с СК-11 для внешних систем (Java, Eclipse Platform; TypeScript, React)
+								Разработка и сопровождение REST API и компонент интеграции с СК-11 для внешних систем
+							</p>
+							<p class="technologies">
+								Java 8, Eclipse Platform, JasperReports Platfom; TypeScript, React, CodeMirror
 							</p>
 						</li>
 						<li>
 							<p class="project kotlin android">
-								Сопровождение интеграции Android-приложения в СК-11 (Kotlin, Realm)
+								Сопровождение интеграции Android-приложения в СК-11
+							</p>
+							<p class="technologies">
+								Kotlin, Realm
 							</p>
 						</li>
 					</ul>
@@ -129,12 +162,18 @@
 					<ul>
 						<li>
 							<p class="project php mysql redis">
-								Разработка и сопровождение интернет-магазинов на платформе Magento (PHP, Zend Framework, Nginx, MySQL, Redis, HTML/CSS, JavaScript)
+								Разработка и сопровождение интернет-магазинов
+							</p>
+							<p class="technologies">
+								Magento 1-2, PHP 5-7, Zend Framework, Nginx, MySQL, Redis, ElasticSearch, JavaScript
 							</p>
 						</li>
 						<li>
 							<p class="project php">
-								Разработка и сопровождение сервисов внутренней инфраструктуры: API Gateway, Bitrix CRM (PHP)
+								Разработка и сопровождение сервисов внутренней инфраструктуры: API Gateway, Bitrix CRM
+							</p>
+							<p class="technologies">
+								PHP, Zend Framework, MySQL, JavaScript
 							</p>
 						</li>
 					</ul>
@@ -151,14 +190,6 @@
 		<section id="education" class="ribbon">
 			<h2 class="activity">Образование</h2>
 			<ul>
-				<li class="ictis sfedu">
-					<p class="dates"><time data-date="2020-09-01">2020</time>&mdash;<time>н.в.</time></p>
-					<span class="organisation">
-						<a href="https://sfedu.ru" data-abbr="ЮФУ">Южный федеральный университет</a>,
-						<a href="https://ictis.sfedu.ru" data-abbr="ИКТИБ">Институт компьютерных технологий и информационной безопасности</a>,
-					</span>
-					<span class="activity">09.06.01 «Информатика и вычислительная техника», аспирант</span>
-				</li>
 				<li class="mopevm ictis sfedu">
 					<p class="dates"><time data-date="2018-09-01">2018</time>&mdash;<time data-date="2020-07-16">2020</time></p>
 					<span class="organisation">
@@ -170,6 +201,7 @@
 					<p class="publication">
 						Тема ВКР:
 						<a href="https://hub.lib.sfedu.ru/repository/material/801281452/">Разработка алгоритмов и программных средств анализа степени идентичности программ</a>
+						(Java, Kotlin, IntelliJ IDEA Platform)
 					</p>
 					<ul class="no-print">
 						<li>
@@ -206,6 +238,7 @@
 					<p class="publication">
 						Тема ВКР:
 						<a href="https://hub.lib.sfedu.ru/repository/material/800839761/">Разработка подключаемого к платформе LiveStreet программного модуля для автоматического извлечения ключевых слов из сообщений в блогах</a>
+						(PHP, LiveStreet CMS, MySQL; Kotlin, DAO, Exposed)
 					</p>
 				</li>
 			</ul>
@@ -238,7 +271,7 @@
 							в NEERC (Чемпионат России и ближнего зарубежья)
 						</li>
 						<li class="yaprofi">
-							<p class="activity">Участие в олимпиаде «Я &mdash; Профессионал»</p>
+							<p class="activity">Участие в олимпиаде «Я &mdash; Профессионал» от Яндекс</p>
 							<p class="award">
 								<ul>
 									<li>
@@ -267,9 +300,17 @@
 					<span class="dates"><time data-date="2016-07">2016</time>&mdash;<time>н.в.</time></span>,
 					<span class="activity">Pet Project</span>
 					<p class="project github javascript">
-						Разработка и поддержка расширения
+						Разработка и поддержка расширения для Gnome Shell
 						<a href="https://extensions.gnome.org/extension/4257/scroll-panel/">Scroll Panel</a>
-						для Gnome Shell (JavaScript)
+						(JavaScript, GTK, yarn, podman) и доработки других расширений
+					</p>
+				</li>
+				<li>
+					<span class="dates"><time data-date="2015">2015</time></span>,
+					<span class="activity">Collaborative Pet Project</span>
+					<p class="project github java">
+						Разработка
+						<a href="https://github.com/NoticEditorTeam/NoticEditor">NoticEditor</a>
 					</p>
 				</li>
 				<li class="annimon no-print">
@@ -312,16 +353,6 @@
 						<a href="https://rating.chgk.info/player/148679">Участие</a> в студенческом и спортивном «Что? Где? Когда?»
 					</p>
 				</li>
-			</ul>
-		</section>
-		<section id="learning" class="tags">
-			<h2>Исследовательские интересы</h2>
-			<ul>
-				<li>Графовые базы данных</li>
-				<li>Обработка естественных языков</li>
-				<li>Статические анализаторы</li>
-				<li>Трансляторы</li>
-				<li>Формальная верификация</li>
 			</ul>
 		</section>
 		<footer>

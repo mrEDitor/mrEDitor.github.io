@@ -11,9 +11,10 @@
 		<script>
 			if (location.search.startsWith('?print')) {
 				var script = document.createElement('script');
-    			script.src = 'html2pdf.bundle.min.js';
+    			script.src = '/html2pdf.bundle.min.js';
 				document.write(script.outerHTML);
 				window.onload = function() { html2pdf(document.body); }
+				document.write('<link rel="stylesheet" href="print.css" />');
 			} else {
 				document.write('<link rel="stylesheet" href="/modern.css" />');
 			}

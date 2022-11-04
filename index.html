@@ -6,22 +6,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="/favicon.png" type="image/png">
 		<link rel="apple-touch-icon" href="/touchicon.png" type="image/png">
-		<link rel="stylesheet" href="/default.css" />
-		<script src="/modern.js"></script>
+		<link rel="stylesheet" href="default.css" />
+		<script src="modern.js"></script>
 		<script>
 			if (location.search.startsWith('?print')) {
 				var script = document.createElement('script');
     			script.src = 'html2pdf.bundle.min.js';
 				document.write(script.outerHTML);
 				window.onload = function() { html2pdf(document.body); }
+				document.write('<link rel="stylesheet" href="print.css" />');
 			} else {
-				document.write('<link rel="stylesheet" href="/modern.css" />');
+				document.write('<link rel="stylesheet" href="modern.css" />');
 			}
 		</script>
 	</head>
 	<body>
 		<header id="whoami">
-			<img src="/me.jpg" alt="photo">
+			<img src="me.jpg" alt="photo">
 			<div>
 				<h1>Eduard Minasyan</h1>
 				<p id="phone"></p>

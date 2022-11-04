@@ -1,0 +1,13 @@
+/* Here are fixes for better look in html2pdf out */
+
+li {
+    list-style-image: url("bullet.png"); 
+}
+
+li.star {
+    list-style-image: url("star.png"); 
+}
+
+li.like {
+    list-style-image: url("like.png"); 
+}

@@ -62,11 +62,11 @@ li {
 }
 
 li.star {
-    list-style: "\2605  ";
+    list-style-type: "\2605  ";
 }
 
 li.like {
-    list-style: "\2665  ";
+    list-style-type: "\2665  ";
 }
 
 .no-print {

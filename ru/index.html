@@ -13,7 +13,7 @@
 				var script = document.createElement('script');
     			script.src = '/html2pdf.bundle.min.js';
 				document.write(script.outerHTML);
-				document.write('<link rel="stylesheet" href="print.css" />');
+				document.write('<link rel="stylesheet" href="/print.css" />');
 				window.onload = function() {
 					document.querySelectorAll('#localization').forEach(p => p.visibility = 'hidden');
 					html2pdf(document.body);

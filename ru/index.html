@@ -15,9 +15,10 @@
 				document.write(script.outerHTML);
 				document.write('<link rel="stylesheet" href="/print.css" />');
 				window.onload = async function() {
-					document.querySelectorAll('#localization').forEach(p => p.visibility = 'hidden');
+					var buttons = document.querySelectorAll('#localization');
+					buttons.forEach(p => p.style.visibility = 'hidden');
 					await html2pdf(document.body);
-					document.querySelectorAll('#localization').forEach(p => p.visibility = 'visible');
+					buttons.forEach(p => p.style.visibility = 'visible');
 				}
 			} else {
 				document.write('<link rel="stylesheet" href="/modern.css" />');

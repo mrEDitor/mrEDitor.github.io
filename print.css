@@ -11,3 +11,7 @@ li.star {
 li.like {
     list-style-image: url("like.png"); 
 }
+
+li li > p {
+    margin: 8px 0px;
+}

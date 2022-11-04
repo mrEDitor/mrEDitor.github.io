@@ -8,8 +8,16 @@
 		<link rel="apple-touch-icon" href="/touchicon.png" type="image/png">
 		<link rel="stylesheet" href="/default.css" />
 		<script src="/modern.js"></script>
-		<script>if (!location.search.startsWith('?print')) document.write('<link rel="stylesheet" href="/modern.css" />');</script>
-		<script>if (location.search.startsWith('?print')) window.print();</script>
+		<script>
+			if (true||location.search.startsWith('?print')) {
+				var script = document.createElement('script');
+    			script.src = 'html2pdf.bundle.min.js';
+				document.write(script.outerHTML);
+				window.onload = function() { html2pdf(document.body); }
+			} else {
+				document.write('<link rel="stylesheet" href="/modern.css" />');
+			}
+		</script>
 	</head>
 	<body>
 		<header id="whoami">

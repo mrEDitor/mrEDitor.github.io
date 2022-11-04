@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="/default.css" />
 		<script src="/modern.js"></script>
 		<script>
-			if (true||location.search.startsWith('?print')) {
+			if (location.search.startsWith('?print')) {
 				var script = document.createElement('script');
     			script.src = 'html2pdf.bundle.min.js';
 				document.write(script.outerHTML);

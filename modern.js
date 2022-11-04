@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   if (query.has('phone')) {
-    document.querySelectorAll('#phone').forEach(
-        value => value.innerText = query.get('phone')
-    );
+    document.querySelectorAll('#phone').forEach(value => {
+      const text = document.createElement('a');
+      text.href = query.get('phone');
+      text.innerText = query.get('phone');
+      value.append(text);
+    });
   }
 });

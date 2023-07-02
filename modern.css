@@ -50,6 +50,16 @@
         z-index: -100;
     }
 
+    @media (prefers-color-scheme: dark) {
+        .tags ul li.star::before {
+            color: rgb(97, 86, 25);
+        }
+    
+        .tags ul li.like::before {
+            color: rgb(119, 38, 38);
+        }        
+    }
+
     div.no-print {
         display: block !important;
     }

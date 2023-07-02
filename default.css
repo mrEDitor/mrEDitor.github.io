@@ -2,6 +2,13 @@ body {
     padding: 1ex;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: #b1cbf2;
+    }
+}
+
 #whoami {
     display: flex;
     min-height: 22ex;
@@ -32,6 +39,12 @@ body {
 
 header, section {
     border-bottom: black 2px solid;
+}
+
+@media (prefers-color-scheme: dark) {
+    header, section {
+        border-bottom: #b1cbf2;
+    }    
 }
 
 h2 {
@@ -75,6 +88,12 @@ li.like {
 
 .tags ul {
     columns: 3;
+}
+
+@media (prefers-color-scheme: dark) {
+    a, a:visited {
+        color: #6969f5;
+    }
 }
 
 @media print {
